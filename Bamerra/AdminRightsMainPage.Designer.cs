@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminRightsMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.advancedDataGridView = new ADGV.AdvancedDataGridView();
-            this.infoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bamerraDataDataSet2 = new Bamerra.BamerraDataDataSet2();
+            this.informationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bamerraDataSet = new Bamerra.BamerraDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.AddRowButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ServicesTreeView = new System.Windows.Forms.TreeView();
             this.DistrictTreeView = new System.Windows.Forms.TreeView();
@@ -45,18 +45,6 @@
             this.firstDataButton = new System.Windows.Forms.Button();
             this.previousButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
-            this.infoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bamerraDataDataSet1 = new Bamerra.BamerraDataDataSet1();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.infoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bamerraDataDataSet = new Bamerra.BamerraDataDataSet();
-            this.infoTableAdapter = new Bamerra.BamerraDataDataSetTableAdapters.InfoTableAdapter();
-            this.tableAdapterManager = new Bamerra.BamerraDataDataSetTableAdapters.TableAdapterManager();
-            this.shopDBDataSet = new Bamerra.ShopDBDataSet();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersTableAdapter = new Bamerra.ShopDBDataSetTableAdapters.CustomersTableAdapter();
-            this.infoTableAdapter1 = new Bamerra.BamerraDataDataSet1TableAdapters.InfoTableAdapter();
-            this.infoTableAdapter2 = new Bamerra.BamerraDataDataSet2TableAdapters.InfoTableAdapter();
             this.customerNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,58 +54,56 @@
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateInSystemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.districtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactFaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lPRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.completedProjectsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.informationTableAdapter = new Bamerra.BamerraDataSetTableAdapters.InformationTableAdapter();
+            this.tableAdapterManager = new Bamerra.BamerraDataSetTableAdapters.TableAdapterManager();
+            this.printButton = new System.Windows.Forms.Button();
+            this.deleteRowButton = new System.Windows.Forms.Button();
+            this.changeRowButton = new System.Windows.Forms.Button();
+            this.rowIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partnershipProgramDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.changeRowButton);
+            this.panel1.Controls.Add(this.deleteRowButton);
+            this.panel1.Controls.Add(this.printButton);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.advancedDataGridView);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.AddRowButton);
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.exitButton);
             this.panel1.Controls.Add(this.lastDataButton);
             this.panel1.Controls.Add(this.firstDataButton);
             this.panel1.Controls.Add(this.previousButton);
             this.panel1.Controls.Add(this.nextButton);
-            this.panel1.Location = new System.Drawing.Point(11, 7);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1271, 579);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTotal
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(1127, 369);
+            resources.ApplyResources(this.lblTotal, "lblTotal");
+            this.lblTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(68, 13);
-            this.lblTotal.TabIndex = 39;
-            this.lblTotal.Text = "Total rows: 0";
             // 
             // advancedDataGridView
             // 
@@ -126,236 +112,126 @@
             this.advancedDataGridView.AutoGenerateContextFilters = true;
             this.advancedDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.advancedDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.customerNoDataGridViewTextBoxColumn,
-            this.fNameDataGridViewTextBoxColumn,
-            this.lNameDataGridViewTextBoxColumn,
-            this.mNameDataGridViewTextBoxColumn,
-            this.address1DataGridViewTextBoxColumn,
-            this.address2DataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.dateInSystemDataGridViewTextBoxColumn});
-            this.advancedDataGridView.DataSource = this.customersBindingSource;
+            this.rowIDDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.partnershipProgramDataGridViewCheckBoxColumn});
+            this.advancedDataGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.advancedDataGridView.DataSource = this.informationBindingSource;
             this.advancedDataGridView.DateWithTime = false;
-            this.advancedDataGridView.Location = new System.Drawing.Point(209, 3);
+            resources.ApplyResources(this.advancedDataGridView, "advancedDataGridView");
             this.advancedDataGridView.Name = "advancedDataGridView";
-            this.advancedDataGridView.Size = new System.Drawing.Size(931, 350);
-            this.advancedDataGridView.TabIndex = 38;
             this.advancedDataGridView.TimeFilter = false;
             this.advancedDataGridView.SortStringChanged += new System.EventHandler(this.advancedDataGridView_SortStringChanged);
             this.advancedDataGridView.FilterStringChanged += new System.EventHandler(this.advancedDataGridView_FilterStringChanged);
             // 
-            // infoBindingSource2
+            // informationBindingSource
             // 
-            this.infoBindingSource2.DataMember = "Info";
-            this.infoBindingSource2.DataSource = this.bamerraDataDataSet2;
+            this.informationBindingSource.DataMember = "Information";
+            this.informationBindingSource.DataSource = this.bamerraDataSet;
             // 
-            // bamerraDataDataSet2
+            // bamerraDataSet
             // 
-            this.bamerraDataDataSet2.DataSetName = "BamerraDataDataSet2";
-            this.bamerraDataDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bamerraDataSet.DataSetName = "BamerraDataSet";
+            this.bamerraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(64, 481);
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddRowButton
             // 
-            this.AddRowButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddRowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRowButton.Location = new System.Drawing.Point(208, 360);
+            resources.ApplyResources(this.AddRowButton, "AddRowButton");
+            this.AddRowButton.BackColor = System.Drawing.Color.Honeydew;
             this.AddRowButton.Name = "AddRowButton";
-            this.AddRowButton.Size = new System.Drawing.Size(140, 40);
-            this.AddRowButton.TabIndex = 36;
-            this.AddRowButton.Text = "Додати ";
-            this.AddRowButton.UseVisualStyleBackColor = true;
+            this.AddRowButton.UseVisualStyleBackColor = false;
             this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.servicesDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.districtDataGridViewTextBoxColumn,
-            this.contactFaceDataGridViewTextBoxColumn,
-            this.lPRDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.completedProjectsDataGridViewTextBoxColumn,
-            this.rateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.infoBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 441);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(739, 115);
-            this.dataGridView1.TabIndex = 35;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox2.Controls.Add(this.ServicesTreeView);
             this.groupBox2.Controls.Add(this.DistrictTreeView);
-            this.groupBox2.Location = new System.Drawing.Point(12, 3);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(182, 412);
-            this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Фільтри";
             // 
             // ServicesTreeView
             // 
             this.ServicesTreeView.CheckBoxes = true;
-            this.ServicesTreeView.Location = new System.Drawing.Point(16, 19);
+            resources.ApplyResources(this.ServicesTreeView, "ServicesTreeView");
             this.ServicesTreeView.Name = "ServicesTreeView";
-            this.ServicesTreeView.Size = new System.Drawing.Size(142, 228);
-            this.ServicesTreeView.TabIndex = 32;
             this.ServicesTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckServicesTreeView);
             // 
             // DistrictTreeView
             // 
             this.DistrictTreeView.CheckBoxes = true;
-            this.DistrictTreeView.Location = new System.Drawing.Point(16, 253);
+            resources.ApplyResources(this.DistrictTreeView, "DistrictTreeView");
             this.DistrictTreeView.Name = "DistrictTreeView";
-            this.DistrictTreeView.Size = new System.Drawing.Size(142, 143);
-            this.DistrictTreeView.TabIndex = 33;
             this.DistrictTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckDistrictTreeView);
             this.DistrictTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DistrictTreeView_AfterSelect);
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(959, 360);
+            resources.ApplyResources(this.exitButton, "exitButton");
+            this.exitButton.BackColor = System.Drawing.Color.Honeydew;
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(130, 40);
-            this.exitButton.TabIndex = 29;
-            this.exitButton.Text = "Вихід";
-            this.toolTip1.SetToolTip(this.exitButton, "Exit");
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.exitButton, resources.GetString("exitButton.ToolTip"));
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // lastDataButton
             // 
-            this.lastDataButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastDataButton.Location = new System.Drawing.Point(823, 360);
+            resources.ApplyResources(this.lastDataButton, "lastDataButton");
+            this.lastDataButton.BackColor = System.Drawing.Color.Honeydew;
             this.lastDataButton.Name = "lastDataButton";
-            this.lastDataButton.Size = new System.Drawing.Size(130, 40);
-            this.lastDataButton.TabIndex = 28;
-            this.lastDataButton.Text = "Остання";
-            this.toolTip1.SetToolTip(this.lastDataButton, "Last Data");
-            this.lastDataButton.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.lastDataButton, resources.GetString("lastDataButton.ToolTip"));
+            this.lastDataButton.UseVisualStyleBackColor = false;
             this.lastDataButton.Click += new System.EventHandler(this.lastDataButton_Click);
             // 
             // firstDataButton
             // 
-            this.firstDataButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.firstDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstDataButton.Location = new System.Drawing.Point(677, 360);
+            resources.ApplyResources(this.firstDataButton, "firstDataButton");
+            this.firstDataButton.BackColor = System.Drawing.Color.Honeydew;
             this.firstDataButton.Name = "firstDataButton";
-            this.firstDataButton.Size = new System.Drawing.Size(140, 40);
-            this.firstDataButton.TabIndex = 27;
-            this.firstDataButton.Text = "Перша";
-            this.toolTip1.SetToolTip(this.firstDataButton, "First Data");
-            this.firstDataButton.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.firstDataButton, resources.GetString("firstDataButton.ToolTip"));
+            this.firstDataButton.UseVisualStyleBackColor = false;
             this.firstDataButton.Click += new System.EventHandler(this.firstDataButton_Click);
             // 
             // previousButton
             // 
-            this.previousButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previousButton.Location = new System.Drawing.Point(500, 360);
+            resources.ApplyResources(this.previousButton, "previousButton");
+            this.previousButton.BackColor = System.Drawing.Color.Honeydew;
             this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(171, 40);
-            this.previousButton.TabIndex = 26;
-            this.previousButton.Text = "Попередня";
-            this.toolTip1.SetToolTip(this.previousButton, "Previous");
-            this.previousButton.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.previousButton, resources.GetString("previousButton.ToolTip"));
+            this.previousButton.UseVisualStyleBackColor = false;
             this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
             // 
             // nextButton
             // 
-            this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton.Location = new System.Drawing.Point(354, 360);
+            resources.ApplyResources(this.nextButton, "nextButton");
+            this.nextButton.BackColor = System.Drawing.Color.Honeydew;
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(140, 40);
-            this.nextButton.TabIndex = 25;
-            this.nextButton.Text = "Наступна";
-            this.toolTip1.SetToolTip(this.nextButton, "Next");
-            this.nextButton.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.nextButton, resources.GetString("nextButton.ToolTip"));
+            this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            // 
-            // infoBindingSource1
-            // 
-            this.infoBindingSource1.DataMember = "Info";
-            this.infoBindingSource1.DataSource = this.bamerraDataDataSet1;
-            // 
-            // bamerraDataDataSet1
-            // 
-            this.bamerraDataDataSet1.DataSetName = "BamerraDataDataSet1";
-            this.bamerraDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // infoBindingSource
-            // 
-            this.infoBindingSource.DataMember = "Info";
-            this.infoBindingSource.DataSource = this.bamerraDataDataSet;
-            this.infoBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.infoBindingSource_ListChanged);
-            // 
-            // bamerraDataDataSet
-            // 
-            this.bamerraDataDataSet.DataSetName = "BamerraDataDataSet";
-            this.bamerraDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // infoTableAdapter
-            // 
-            this.infoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.InfoTableAdapter = this.infoTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Bamerra.BamerraDataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // shopDBDataSet
-            // 
-            this.shopDBDataSet.DataSetName = "ShopDBDataSet";
-            this.shopDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataMember = "Customers";
-            this.customersBindingSource.DataSource = this.shopDBDataSet;
-            // 
-            // customersTableAdapter
-            // 
-            this.customersTableAdapter.ClearBeforeFill = true;
-            // 
-            // infoTableAdapter1
-            // 
-            this.infoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // infoTableAdapter2
-            // 
-            this.infoTableAdapter2.ClearBeforeFill = true;
             // 
             // customerNoDataGridViewTextBoxColumn
             // 
             this.customerNoDataGridViewTextBoxColumn.DataPropertyName = "CustomerNo";
-            this.customerNoDataGridViewTextBoxColumn.HeaderText = "CustomerNo";
-            this.customerNoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.customerNoDataGridViewTextBoxColumn, "customerNoDataGridViewTextBoxColumn");
             this.customerNoDataGridViewTextBoxColumn.Name = "customerNoDataGridViewTextBoxColumn";
             this.customerNoDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
@@ -363,150 +239,193 @@
             // fNameDataGridViewTextBoxColumn
             // 
             this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "FName";
-            this.fNameDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.fNameDataGridViewTextBoxColumn, "fNameDataGridViewTextBoxColumn");
             this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
             this.fNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // lNameDataGridViewTextBoxColumn
             // 
             this.lNameDataGridViewTextBoxColumn.DataPropertyName = "LName";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "LName";
-            this.lNameDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.lNameDataGridViewTextBoxColumn, "lNameDataGridViewTextBoxColumn");
             this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
             this.lNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // mNameDataGridViewTextBoxColumn
             // 
             this.mNameDataGridViewTextBoxColumn.DataPropertyName = "MName";
-            this.mNameDataGridViewTextBoxColumn.HeaderText = "MName";
-            this.mNameDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.mNameDataGridViewTextBoxColumn, "mNameDataGridViewTextBoxColumn");
             this.mNameDataGridViewTextBoxColumn.Name = "mNameDataGridViewTextBoxColumn";
             this.mNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // address1DataGridViewTextBoxColumn
             // 
             this.address1DataGridViewTextBoxColumn.DataPropertyName = "Address1";
-            this.address1DataGridViewTextBoxColumn.HeaderText = "Address1";
-            this.address1DataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.address1DataGridViewTextBoxColumn, "address1DataGridViewTextBoxColumn");
             this.address1DataGridViewTextBoxColumn.Name = "address1DataGridViewTextBoxColumn";
             this.address1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // address2DataGridViewTextBoxColumn
             // 
             this.address2DataGridViewTextBoxColumn.DataPropertyName = "Address2";
-            this.address2DataGridViewTextBoxColumn.HeaderText = "Address2";
-            this.address2DataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.address2DataGridViewTextBoxColumn, "address2DataGridViewTextBoxColumn");
             this.address2DataGridViewTextBoxColumn.Name = "address2DataGridViewTextBoxColumn";
             this.address2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // cityDataGridViewTextBoxColumn
             // 
             this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.cityDataGridViewTextBoxColumn, "cityDataGridViewTextBoxColumn");
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             this.cityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.phoneDataGridViewTextBoxColumn, "phoneDataGridViewTextBoxColumn");
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
             this.phoneDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dateInSystemDataGridViewTextBoxColumn
             // 
             this.dateInSystemDataGridViewTextBoxColumn.DataPropertyName = "DateInSystem";
-            this.dateInSystemDataGridViewTextBoxColumn.HeaderText = "DateInSystem";
-            this.dateInSystemDataGridViewTextBoxColumn.MinimumWidth = 22;
+            resources.ApplyResources(this.dateInSystemDataGridViewTextBoxColumn, "dateInSystemDataGridViewTextBoxColumn");
             this.dateInSystemDataGridViewTextBoxColumn.Name = "dateInSystemDataGridViewTextBoxColumn";
             this.dateInSystemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // nameDataGridViewTextBoxColumn
+            // informationTableAdapter
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.informationTableAdapter.ClearBeforeFill = true;
             // 
-            // servicesDataGridViewTextBoxColumn
+            // tableAdapterManager
             // 
-            this.servicesDataGridViewTextBoxColumn.DataPropertyName = "Services";
-            this.servicesDataGridViewTextBoxColumn.HeaderText = "Services";
-            this.servicesDataGridViewTextBoxColumn.Name = "servicesDataGridViewTextBoxColumn";
+            this.tableAdapterManager.AdminPasswordsTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.InformationTableAdapter = this.informationTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Bamerra.BamerraDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserPasswordsTableAdapter = null;
             // 
-            // addressDataGridViewTextBoxColumn
+            // printButton
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            resources.ApplyResources(this.printButton, "printButton");
+            this.printButton.BackColor = System.Drawing.Color.Honeydew;
+            this.printButton.Name = "printButton";
+            this.printButton.UseVisualStyleBackColor = false;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
-            // districtDataGridViewTextBoxColumn
+            // deleteRowButton
             // 
-            this.districtDataGridViewTextBoxColumn.DataPropertyName = "District";
-            this.districtDataGridViewTextBoxColumn.HeaderText = "District";
-            this.districtDataGridViewTextBoxColumn.Name = "districtDataGridViewTextBoxColumn";
+            resources.ApplyResources(this.deleteRowButton, "deleteRowButton");
+            this.deleteRowButton.BackColor = System.Drawing.Color.Honeydew;
+            this.deleteRowButton.Name = "deleteRowButton";
+            this.deleteRowButton.UseVisualStyleBackColor = false;
             // 
-            // contactFaceDataGridViewTextBoxColumn
+            // changeRowButton
             // 
-            this.contactFaceDataGridViewTextBoxColumn.DataPropertyName = "ContactFace";
-            this.contactFaceDataGridViewTextBoxColumn.HeaderText = "ContactFace";
-            this.contactFaceDataGridViewTextBoxColumn.Name = "contactFaceDataGridViewTextBoxColumn";
+            resources.ApplyResources(this.changeRowButton, "changeRowButton");
+            this.changeRowButton.BackColor = System.Drawing.Color.Honeydew;
+            this.changeRowButton.Name = "changeRowButton";
+            this.changeRowButton.UseVisualStyleBackColor = false;
             // 
-            // lPRDataGridViewTextBoxColumn
+            // rowIDDataGridViewTextBoxColumn
             // 
-            this.lPRDataGridViewTextBoxColumn.DataPropertyName = "LPR";
-            this.lPRDataGridViewTextBoxColumn.HeaderText = "LPR";
-            this.lPRDataGridViewTextBoxColumn.Name = "lPRDataGridViewTextBoxColumn";
+            this.rowIDDataGridViewTextBoxColumn.DataPropertyName = "RowID";
+            resources.ApplyResources(this.rowIDDataGridViewTextBoxColumn, "rowIDDataGridViewTextBoxColumn");
+            this.rowIDDataGridViewTextBoxColumn.Name = "rowIDDataGridViewTextBoxColumn";
+            this.rowIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rowIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // emailDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "E-mail";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Services";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // completedProjectsDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.completedProjectsDataGridViewTextBoxColumn.DataPropertyName = "CompletedProjects";
-            this.completedProjectsDataGridViewTextBoxColumn.HeaderText = "CompletedProjects";
-            this.completedProjectsDataGridViewTextBoxColumn.Name = "completedProjectsDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Address";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // rateDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.rateDataGridViewTextBoxColumn.DataPropertyName = "Rate";
-            this.rateDataGridViewTextBoxColumn.HeaderText = "Rate";
-            this.rateDataGridViewTextBoxColumn.Name = "rateDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "District";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ContactFace";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LPR";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Email";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Description";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "CompletedProjects";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Rate";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // partnershipProgramDataGridViewCheckBoxColumn
+            // 
+            this.partnershipProgramDataGridViewCheckBoxColumn.DataPropertyName = "PartnershipProgram";
+            resources.ApplyResources(this.partnershipProgramDataGridViewCheckBoxColumn, "partnershipProgramDataGridViewCheckBoxColumn");
+            this.partnershipProgramDataGridViewCheckBoxColumn.Name = "partnershipProgramDataGridViewCheckBoxColumn";
+            this.partnershipProgramDataGridViewCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // AdminRightsMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(1292, 616);
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.Controls.Add(this.panel1);
             this.Name = "AdminRightsMainPage";
-            this.Text = "Bamerra";
             this.Load += new System.EventHandler(this.AdminRightsMainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bamerraDataDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -514,10 +433,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private BamerraDataDataSet bamerraDataDataSet;
-        private System.Windows.Forms.BindingSource infoBindingSource;
-        private BamerraDataDataSetTableAdapters.InfoTableAdapter infoTableAdapter;
-        private BamerraDataDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button lastDataButton;
         private System.Windows.Forms.Button firstDataButton;
@@ -527,20 +442,10 @@
         private System.Windows.Forms.TreeView ServicesTreeView;
         private System.Windows.Forms.TreeView DistrictTreeView;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddRowButton;
         private System.Windows.Forms.Button button1;
         private ADGV.AdvancedDataGridView advancedDataGridView;
         private System.Windows.Forms.Label lblTotal;
-        private ShopDBDataSet shopDBDataSet;
-        private System.Windows.Forms.BindingSource customersBindingSource;
-        private ShopDBDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
-        private BamerraDataDataSet1 bamerraDataDataSet1;
-        private System.Windows.Forms.BindingSource infoBindingSource1;
-        private BamerraDataDataSet1TableAdapters.InfoTableAdapter infoTableAdapter1;
-        private BamerraDataDataSet2 bamerraDataDataSet2;
-        private System.Windows.Forms.BindingSource infoBindingSource2;
-        private BamerraDataDataSet2TableAdapters.InfoTableAdapter infoTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
@@ -560,5 +465,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn completedProjectsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rateDataGridViewTextBoxColumn;
+        private BamerraDataSet bamerraDataSet;
+        private System.Windows.Forms.BindingSource informationBindingSource;
+        private BamerraDataSetTableAdapters.InformationTableAdapter informationTableAdapter;
+        private BamerraDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button changeRowButton;
+        private System.Windows.Forms.Button deleteRowButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rowIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn partnershipProgramDataGridViewCheckBoxColumn;
     }
 }

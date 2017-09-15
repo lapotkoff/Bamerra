@@ -50,8 +50,17 @@
     <Reference Include="AdvancedDataGridView">
       <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,26 +83,21 @@
     <Compile Include="AdminRightsMainPage.Designer.cs">
       <DependentUpon>AdminRightsMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="BamerraDataDataSet.Designer.cs">
+    <Compile Include="BamerraDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BamerraDataDataSet.xsd</DependentUpon>
+      <DependentUpon>BamerraDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BamerraDataDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BamerraDataDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BamerraDataDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BamerraDataDataSet2.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs">
+      <DependentUpon>PrintModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LogAdminPage.cs">
       <SubType>Form</SubType>
@@ -101,13 +105,23 @@
     <Compile Include="LogAdminPage.Designer.cs">
       <DependentUpon>LogAdminPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShopDBDataSet.Designer.cs">
+    <Compile Include="PrintModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ShopDBDataSet.xsd</DependentUpon>
+      <DependentUpon>PrintModel.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="PrintModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrintModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRightsMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +132,9 @@
       <DependentUpon>AddRowWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRightsMainPage.resx">
+      <DependentUpon>AdminRightsMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRightsMainPage.uk.resx">
       <DependentUpon>AdminRightsMainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -135,40 +152,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BamerraDataDataSet.xsc">
-      <DependentUpon>BamerraDataDataSet.xsd</DependentUpon>
+    <None Include="BamerraDataSet.xsc">
+      <DependentUpon>BamerraDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BamerraDataDataSet.xsd">
+    <None Include="BamerraDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BamerraDataDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BamerraDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BamerraDataDataSet.xss">
-      <DependentUpon>BamerraDataDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BamerraDataDataSet1.xsc">
-      <DependentUpon>BamerraDataDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BamerraDataDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BamerraDataDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BamerraDataDataSet1.xss">
-      <DependentUpon>BamerraDataDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BamerraDataDataSet2.xsc">
-      <DependentUpon>BamerraDataDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BamerraDataDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BamerraDataDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BamerraDataDataSet2.xss">
-      <DependentUpon>BamerraDataDataSet2.xsd</DependentUpon>
+    <None Include="BamerraDataSet.xss">
+      <DependentUpon>BamerraDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="PrintModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PrintModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PrintModel.edmx.diagram">
+      <DependentUpon>PrintModel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -178,17 +180,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ShopDBDataSet.xsc">
-      <DependentUpon>ShopDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ShopDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ShopDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ShopDBDataSet.xss">
-      <DependentUpon>ShopDBDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -211,20 +202,26 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BamerraData.mdf">
+    <Content Include="Bamerra.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="BamerraData_log.ldf">
+    <Content Include="Bamerra_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BamerraData.mdf</DependentUpon>
+      <DependentUpon>Bamerra.mdf</DependentUpon>
     </Content>
-    <Content Include="ShopDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="PrintModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PrintModel.Context.cs</LastGenOutput>
+      <DependentUpon>PrintModel.edmx</DependentUpon>
     </Content>
-    <Content Include="ShopDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ShopDB.mdf</DependentUpon>
+    <Content Include="PrintModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrintModel.edmx</DependentUpon>
+      <LastGenOutput>PrintModel.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

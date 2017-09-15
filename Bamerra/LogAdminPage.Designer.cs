@@ -28,108 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.AdminNameTextBox = new System.Windows.Forms.TextBox();
+            this.pinPukLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.SignInAdminButton = new System.Windows.Forms.Button();
-            this.PrevPageButton = new System.Windows.Forms.Button();
             this.ExitAppButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.warningLabel = new System.Windows.Forms.Label();
+            this.adminLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // pinPukLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Administrator Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
-            // 
-            // AdminNameTextBox
-            // 
-            this.AdminNameTextBox.Location = new System.Drawing.Point(40, 42);
-            this.AdminNameTextBox.Name = "AdminNameTextBox";
-            this.AdminNameTextBox.Size = new System.Drawing.Size(181, 20);
-            this.AdminNameTextBox.TabIndex = 2;
+            this.pinPukLabel.AutoSize = true;
+            this.pinPukLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.pinPukLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinPukLabel.ForeColor = System.Drawing.Color.MintCream;
+            this.pinPukLabel.Location = new System.Drawing.Point(31, 49);
+            this.pinPukLabel.Name = "pinPukLabel";
+            this.pinPukLabel.Size = new System.Drawing.Size(45, 16);
+            this.pinPukLabel.TabIndex = 1;
+            this.pinPukLabel.Text = "PIN1:";
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(40, 107);
+            this.PasswordTextBox.Location = new System.Drawing.Point(34, 77);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(181, 20);
+            this.PasswordTextBox.Size = new System.Drawing.Size(214, 20);
             this.PasswordTextBox.TabIndex = 3;
             // 
             // SignInAdminButton
             // 
-            this.SignInAdminButton.Location = new System.Drawing.Point(96, 146);
+            this.SignInAdminButton.BackColor = System.Drawing.Color.MintCream;
+            this.SignInAdminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignInAdminButton.Location = new System.Drawing.Point(34, 116);
             this.SignInAdminButton.Name = "SignInAdminButton";
-            this.SignInAdminButton.Size = new System.Drawing.Size(65, 41);
+            this.SignInAdminButton.Size = new System.Drawing.Size(88, 41);
             this.SignInAdminButton.TabIndex = 4;
             this.SignInAdminButton.Text = "Sign in";
-            this.SignInAdminButton.UseVisualStyleBackColor = true;
+            this.SignInAdminButton.UseVisualStyleBackColor = false;
             this.SignInAdminButton.Click += new System.EventHandler(this.SignInAdminButton_Click);
-            // 
-            // PrevPageButton
-            // 
-            this.PrevPageButton.Location = new System.Drawing.Point(28, 146);
-            this.PrevPageButton.Name = "PrevPageButton";
-            this.PrevPageButton.Size = new System.Drawing.Size(62, 41);
-            this.PrevPageButton.TabIndex = 5;
-            this.PrevPageButton.Text = "Previous Page";
-            this.PrevPageButton.UseVisualStyleBackColor = true;
-            this.PrevPageButton.Click += new System.EventHandler(this.PrevPageButton_Click);
             // 
             // ExitAppButton
             // 
-            this.ExitAppButton.Location = new System.Drawing.Point(167, 146);
+            this.ExitAppButton.BackColor = System.Drawing.Color.MintCream;
+            this.ExitAppButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitAppButton.Location = new System.Drawing.Point(160, 116);
             this.ExitAppButton.Name = "ExitAppButton";
-            this.ExitAppButton.Size = new System.Drawing.Size(64, 41);
+            this.ExitAppButton.Size = new System.Drawing.Size(88, 41);
             this.ExitAppButton.TabIndex = 6;
             this.ExitAppButton.Text = "Exit";
-            this.ExitAppButton.UseVisualStyleBackColor = true;
+            this.ExitAppButton.UseVisualStyleBackColor = false;
             this.ExitAppButton.Click += new System.EventHandler(this.ExitAppButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.adminLabel);
+            this.panel1.Controls.Add(this.warningLabel);
+            this.panel1.Controls.Add(this.pinPukLabel);
+            this.panel1.Controls.Add(this.ExitAppButton);
+            this.panel1.Controls.Add(this.PasswordTextBox);
+            this.panel1.Controls.Add(this.SignInAdminButton);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 195);
+            this.panel1.TabIndex = 7;
+            // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.ForeColor = System.Drawing.Color.Red;
+            this.warningLabel.Location = new System.Drawing.Point(17, 178);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(0, 13);
+            this.warningLabel.TabIndex = 7;
+            // 
+            // adminLabel
+            // 
+            this.adminLabel.AutoSize = true;
+            this.adminLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminLabel.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.adminLabel.Location = new System.Drawing.Point(74, 13);
+            this.adminLabel.Name = "adminLabel";
+            this.adminLabel.Size = new System.Drawing.Size(138, 25);
+            this.adminLabel.TabIndex = 8;
+            this.adminLabel.Text = "Administrator";
             // 
             // LogAdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(259, 229);
-            this.Controls.Add(this.ExitAppButton);
-            this.Controls.Add(this.PrevPageButton);
-            this.Controls.Add(this.SignInAdminButton);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.AdminNameTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(315, 219);
+            this.Controls.Add(this.panel1);
             this.Name = "LogAdminPage";
             this.Text = "Bamerra";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox AdminNameTextBox;
+        private System.Windows.Forms.Label pinPukLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button SignInAdminButton;
-        private System.Windows.Forms.Button PrevPageButton;
         private System.Windows.Forms.Button ExitAppButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label warningLabel;
+        private System.Windows.Forms.Label adminLabel;
     }
 }

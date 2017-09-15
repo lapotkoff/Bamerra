@@ -10,17 +10,20 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 using System.Data.Common;
+using DGVPrinterHelper;
 
 namespace Bamerra
 {
     public partial class AdminRightsMainPage : Form
     {
 
-        private string connection_string = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=""C:\Users\Valik\Documents\Visual Studio 2013\Projects\2 курс\Bamerra\Bamerra\Bamerra\BamerraData.mdf"";Integrated Security=True;Connect Timeout=30";
-        private string command_string = "Select * FROM Info";
+        //private string connection_string = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=""C:\Users\Valik\Documents\Visual Studio 2013\Projects\2 курс\Bamerra\Bamerra\Bamerra\BamerraData.mdf"";Integrated Security=True;Connect Timeout=30";
+        private string connection_string = Properties.Settings.Default.BamerraConnectionString;
+        private string command_string = "Select * FROM Information";
         private string RowFilter = "";
+        private DataTable information = new DataTable("Information");
 
-
+        #region Loading tools
         private void LoadServicesTreeView()
         {
             ServicesTreeView.BeginUpdate();
@@ -88,6 +91,7 @@ namespace Bamerra
             DistrictTreeView.Nodes[0].Nodes.Add("Личаківський");
             DistrictTreeView.Nodes[0].Nodes.Add("Сихівський");
         }
+        #endregion
 
         public AdminRightsMainPage()
         {
@@ -96,20 +100,12 @@ namespace Bamerra
 
         private void AdminRightsMainPage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bamerraDataDataSet2.Info' table. You can move, or remove it, as needed.
-            this.infoTableAdapter2.Fill(this.bamerraDataDataSet2.Info);
-            this.customersTableAdapter.Fill(this.shopDBDataSet.Customers);
-            lblTotal.Text = string.Format("Total rows: {0}", customersBindingSource.Count);
-            // TODO: This line of code loads data into the 'bamerraDataDataSet1.Info' table. You can move, or remove it, as needed.
-            //this.infoTableAdapter1.Fill(this.bamerraDataDataSet1.Info);
-            // TODO: This line of code loads data into the 'shopDBDataSet.Customers' table. You can move, or remove it, as needed.
-            //this.customersTableAdapter.Fill(this.shopDBDataSet.Customers);
-            // TODO: This line of code loads data into the 'bamerraDataDataSet.Info' table. You can move, or remove it, as needed.
-            //this.infoTableAdapter1.Fill(this.bamerraDataDataSet1.Info);
-            //this.customersTableAdapter.Fill(this.shopDBDataSet.Customers);
+            // TODO: This line of code loads data into the 'bamerraDataSet.Information' table. You can move, or remove it, as needed.
+            this.informationTableAdapter.Fill(this.bamerraDataSet.Information);
+
+            lblTotal.Text = string.Format("Загальна кількість рядків: {0}", informationBindingSource.Count);
             //встановлюємо з'єднання, витягуємо всю інфу з таблиці Info і відображаємо
             //колонки в datagridview так як нам треба
-
 
 
             //using (SqlConnection sql_connection = new SqlConnection(connection_string))
@@ -144,15 +140,30 @@ namespace Bamerra
 
             //    advancedDataGridView.DataSource = data_set.Tables[0];
             //    dataGridView1.DataSource = data_set.Tables[0];
-              
+
             //}
 
 
             LoadServicesTreeView();
             LoadDistrictTreeView();
-
+            RowsColor();
             //this.advancedDataGridView.RowHeadersVisible = false;       ?????
 
+
+
+            //SqlDataAdapter adapter = new SqlDataAdapter(command_string, connection_string);
+            //adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+            //adapter.Fill(information);
+
+            //advancedDataGridView.ReadOnly = true;
+            //advancedDataGridView.DataSource = information;
+
+        }
+
+        #region Button Events
+        private void AddRowButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.DialogResult result = new AddRowWindow(this.bamerraDataSet.Information).ShowDialog();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -167,42 +178,43 @@ namespace Bamerra
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            customersBindingSource.MoveNext();
+            informationBindingSource.MoveNext();
         }
 
         private void previousButton_Click(object sender, EventArgs e)
         {
-            customersBindingSource.MovePrevious();
+            informationBindingSource.MovePrevious();
         }
 
         private void firstDataButton_Click(object sender, EventArgs e)
         {
-            customersBindingSource.MoveFirst();
+            informationBindingSource.MoveFirst();
         }
 
         private void lastDataButton_Click(object sender, EventArgs e)
         {
-            customersBindingSource.MoveLast();
+            informationBindingSource.MoveLast();
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void printButton_Click(object sender, EventArgs e)
         {
-
+            //треба подумати як впихнути в одну сторінку всю таблицю по ширині!!!
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Звіт";
+            printer.SubTitle = string.Format("Дата: {0}", DateTime.Now.Date);
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Bamerra";
+            printer.FooterSpacing = 15;
+            //зберігає колір і трохи розширює
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+            printer.PrintDataGridView(advancedDataGridView);
         }
+        #endregion
 
-
-        private void infoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void AddRowButton_Click(object sender, EventArgs e)
-        {
-            AddRowWindow addrw = new AddRowWindow();
-            addrw.Show();
-        }
-
+        #region All about TreeView
         private void DistrictTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
@@ -283,7 +295,9 @@ namespace Bamerra
             //dataGridView1.DataSource = filteredView;
 
         }
+        #endregion
 
+        #region Test button
         private void button1_Click(object sender, EventArgs e)
         {
             FindAllCheckedNodes(DistrictTreeView.TopNode, " District ");
@@ -293,23 +307,44 @@ namespace Bamerra
             adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             adapter.Fill(filteredtable);
             DataView filteredView = new DataView(filteredtable, RowFilter, "District", DataViewRowState.CurrentRows);
-            dataGridView1.DataSource = filteredView;
+            //dataGridView1.DataSource = filteredView;
             RowFilter = "";
         }
+        #endregion
 
+        #region Advanced DGridView events
         private void advancedDataGridView_FilterStringChanged(object sender, EventArgs e)
         {
-            this.infoBindingSource.Filter = this.advancedDataGridView.FilterString;
+            informationBindingSource.Filter = this.advancedDataGridView.FilterString;
         }
 
         private void advancedDataGridView_SortStringChanged(object sender, EventArgs e)
         {
-            this.infoBindingSource.Sort = this.advancedDataGridView.SortString;
+            informationBindingSource.Sort = this.advancedDataGridView.SortString;
         }
 
         private void infoBindingSource_ListChanged(object sender, ListChangedEventArgs e)
         {
-            lblTotal.Text = string.Format("Total rows: {0}", this.infoBindingSource.Count);
+            lblTotal.Text = string.Format("Загальна кількість рядків: {0}", this.informationBindingSource.Count);
+        }
+        #endregion
+
+        public void RowsColor()
+        {
+            for(int i=0; i<advancedDataGridView.Rows.Count; i++)
+            {
+                if(i%2 == 1)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.DarkSeaGreen;
+                }
+                string partnership = advancedDataGridView.Rows[i].Cells[11].Value.ToString();
+                if(partnership == "True")
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Purple;
+                }
+
+
+            }
         }
     }
 }

@@ -7,12 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bamerra.Commands;
 
 namespace Bamerra
 {
     public partial class AddRowWindow : Form
     {
 
+        private DataTable table;
+
+        public AddRowWindow(DataTable table)
+        {
+            this.table = table;
+            InitializeComponent();
+        }
+
+        #region Loading tools
         private void LoadServicesToAddTreeView()
         {
             servicesToAddTreeView.Nodes.Add("Послуги");
@@ -85,22 +95,14 @@ namespace Bamerra
             rateCombobox.Items.Add("2");
             rateCombobox.Items.Add("1");
         }
-
-        public AddRowWindow()
-        {
-            InitializeComponent();
-        }
+        #endregion
 
         private void AddRowWindow_Load(object sender, EventArgs e)
         {
             LoadServicesToAddTreeView();
             LoadDistrictsToAddTreeView();
             LoadRateComboBox();
-        }
-
-        private void returnButton_Click(object sender, EventArgs e)
-        {
-
+            CenterToScreen();
         }
 
         private void rateCombobox_SelectedIndexChanged(object sender, EventArgs e)
@@ -136,5 +138,54 @@ namespace Bamerra
                 rateTextBox.Text = "No";
             }
         }
+
+        #region Button events
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            DataRow newRow = table.NewRow();
+            newRow["Name"] = nameTextBox.Text.Count() == 0 ? null : nameTextBox.Text;
+            newRow["Address"] = addressTextBox.Text.Count() == 0 ? null : addressTextBox.Text;
+            newRow["ContactFace"] = contactFaceTextBox.Text.Count() == 0 ? null : contactFaceTextBox.Text;
+            newRow["LPR"] = lPRTextBox.Text.Count() == 0 ? null : lPRTextBox.Text;
+            newRow["Email"] = e_mailTextBox.Text.Count() == 0 ? null : e_mailTextBox.Text;
+            newRow["Description"] = descriptionTextBox.Text.Count() == 0 ? null : descriptionTextBox.Text;
+            newRow["Email"] = e_mailTextBox.Text.Count() == 0 ? null : e_mailTextBox.Text;
+            newRow["CompletedProjects"] = completedProjectsTextBox.Text.Count() == 0 ? null : completedProjectsTextBox.Text;
+            newRow["Rate"] = rateTextBox.Text.Count() == 0 ? null : rateTextBox.Text;
+            if(partnershipCheckBox.Checked == true)
+            {
+                newRow["PartnershipProgram"] = true;
+            }
+            else
+            {
+                newRow["PartnershipProgram"] = false;
+            }
+            //district
+            //servicws
+
+            try
+            {
+                table.Rows.Add(newRow);
+
+                DialogResult = System.Windows.Forms.DialogResult.OK;
+
+                DBManager.InsertInformation(newRow);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                this.Close();
+            }
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+        }
+        #endregion
     }
 }

@@ -47,11 +47,13 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.servicesToAddTreeView = new System.Windows.Forms.TreeView();
             this.districtsToAddTreeView = new System.Windows.Forms.TreeView();
-            this.AddRowToDatabaseButton = new System.Windows.Forms.Button();
-            this.returnButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.servicesToAddTreeView = new System.Windows.Forms.TreeView();
+            this.okButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.partnershipCheckBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             rateLabel = new System.Windows.Forms.Label();
             completedProjectsLabel = new System.Windows.Forms.Label();
@@ -67,120 +69,68 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
+            nameLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            nameLabel.ForeColor = System.Drawing.Color.Honeydew;
             nameLabel.Location = new System.Drawing.Point(3, 11);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(42, 13);
             nameLabel.TabIndex = 31;
             nameLabel.Text = "Назва:";
             // 
-            // rateCombobox
-            // 
-            this.rateCombobox.FormattingEnabled = true;
-            this.rateCombobox.Location = new System.Drawing.Point(110, 311);
-            this.rateCombobox.Name = "rateCombobox";
-            this.rateCombobox.Size = new System.Drawing.Size(60, 21);
-            this.rateCombobox.TabIndex = 51;
-            this.rateCombobox.SelectedIndexChanged += new System.EventHandler(this.rateCombobox_SelectedIndexChanged);
-            // 
-            // rateTextBox
-            // 
-            this.rateTextBox.Location = new System.Drawing.Point(176, 312);
-            this.rateTextBox.Name = "rateTextBox";
-            this.rateTextBox.Size = new System.Drawing.Size(34, 20);
-            this.rateTextBox.TabIndex = 50;
-            // 
             // rateLabel
             // 
             rateLabel.AutoSize = true;
+            rateLabel.ForeColor = System.Drawing.Color.Honeydew;
             rateLabel.Location = new System.Drawing.Point(3, 315);
             rateLabel.Name = "rateLabel";
             rateLabel.Size = new System.Drawing.Size(51, 13);
             rateLabel.TabIndex = 49;
             rateLabel.Text = "Рейтинг:";
             // 
-            // completedProjectsTextBox
-            // 
-            this.completedProjectsTextBox.Location = new System.Drawing.Point(110, 244);
-            this.completedProjectsTextBox.Multiline = true;
-            this.completedProjectsTextBox.Name = "completedProjectsTextBox";
-            this.completedProjectsTextBox.Size = new System.Drawing.Size(100, 60);
-            this.completedProjectsTextBox.TabIndex = 48;
-            // 
             // completedProjectsLabel
             // 
             completedProjectsLabel.AutoSize = true;
+            completedProjectsLabel.ForeColor = System.Drawing.Color.Honeydew;
             completedProjectsLabel.Location = new System.Drawing.Point(3, 247);
             completedProjectsLabel.Name = "completedProjectsLabel";
             completedProjectsLabel.Size = new System.Drawing.Size(99, 13);
             completedProjectsLabel.TabIndex = 47;
             completedProjectsLabel.Text = "Виконані проекти:";
             // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.Location = new System.Drawing.Point(110, 135);
-            this.descriptionTextBox.Multiline = true;
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(100, 103);
-            this.descriptionTextBox.TabIndex = 46;
-            // 
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
+            descriptionLabel.ForeColor = System.Drawing.Color.Honeydew;
             descriptionLabel.Location = new System.Drawing.Point(3, 138);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(36, 13);
             descriptionLabel.TabIndex = 45;
             descriptionLabel.Text = "Опис:";
             // 
-            // e_mailTextBox
-            // 
-            this.e_mailTextBox.Location = new System.Drawing.Point(110, 109);
-            this.e_mailTextBox.Name = "e_mailTextBox";
-            this.e_mailTextBox.Size = new System.Drawing.Size(100, 20);
-            this.e_mailTextBox.TabIndex = 44;
-            // 
             // e_mailLabel
             // 
             e_mailLabel.AutoSize = true;
+            e_mailLabel.ForeColor = System.Drawing.Color.Honeydew;
             e_mailLabel.Location = new System.Drawing.Point(3, 112);
             e_mailLabel.Name = "e_mailLabel";
             e_mailLabel.Size = new System.Drawing.Size(38, 13);
             e_mailLabel.TabIndex = 43;
             e_mailLabel.Text = "E-mail:";
             // 
-            // lPRTextBox
-            // 
-            this.lPRTextBox.Location = new System.Drawing.Point(110, 83);
-            this.lPRTextBox.Name = "lPRTextBox";
-            this.lPRTextBox.Size = new System.Drawing.Size(100, 20);
-            this.lPRTextBox.TabIndex = 42;
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(110, 8);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nameTextBox.TabIndex = 32;
-            // 
             // lPRLabel
             // 
             lPRLabel.AutoSize = true;
+            lPRLabel.ForeColor = System.Drawing.Color.Honeydew;
             lPRLabel.Location = new System.Drawing.Point(3, 86);
             lPRLabel.Name = "lPRLabel";
             lPRLabel.Size = new System.Drawing.Size(33, 13);
             lPRLabel.TabIndex = 41;
             lPRLabel.Text = "ЛПР:";
             // 
-            // contactFaceTextBox
-            // 
-            this.contactFaceTextBox.Location = new System.Drawing.Point(110, 57);
-            this.contactFaceTextBox.Name = "contactFaceTextBox";
-            this.contactFaceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.contactFaceTextBox.TabIndex = 40;
-            // 
             // contactFaceLabel
             // 
             contactFaceLabel.AutoSize = true;
+            contactFaceLabel.ForeColor = System.Drawing.Color.Honeydew;
             contactFaceLabel.Location = new System.Drawing.Point(3, 60);
             contactFaceLabel.Name = "contactFaceLabel";
             contactFaceLabel.Size = new System.Drawing.Size(106, 13);
@@ -190,14 +140,84 @@
             // addressLabel
             // 
             addressLabel.AutoSize = true;
+            addressLabel.ForeColor = System.Drawing.Color.Honeydew;
             addressLabel.Location = new System.Drawing.Point(3, 34);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(47, 13);
             addressLabel.TabIndex = 35;
             addressLabel.Text = "Адреса:";
             // 
+            // rateCombobox
+            // 
+            this.rateCombobox.BackColor = System.Drawing.Color.MintCream;
+            this.rateCombobox.FormattingEnabled = true;
+            this.rateCombobox.Location = new System.Drawing.Point(110, 311);
+            this.rateCombobox.Name = "rateCombobox";
+            this.rateCombobox.Size = new System.Drawing.Size(60, 21);
+            this.rateCombobox.TabIndex = 51;
+            this.rateCombobox.SelectedIndexChanged += new System.EventHandler(this.rateCombobox_SelectedIndexChanged);
+            // 
+            // rateTextBox
+            // 
+            this.rateTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.rateTextBox.Location = new System.Drawing.Point(176, 312);
+            this.rateTextBox.Name = "rateTextBox";
+            this.rateTextBox.Size = new System.Drawing.Size(34, 20);
+            this.rateTextBox.TabIndex = 50;
+            // 
+            // completedProjectsTextBox
+            // 
+            this.completedProjectsTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.completedProjectsTextBox.Location = new System.Drawing.Point(110, 244);
+            this.completedProjectsTextBox.Multiline = true;
+            this.completedProjectsTextBox.Name = "completedProjectsTextBox";
+            this.completedProjectsTextBox.Size = new System.Drawing.Size(100, 60);
+            this.completedProjectsTextBox.TabIndex = 48;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.descriptionTextBox.Location = new System.Drawing.Point(110, 135);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(100, 103);
+            this.descriptionTextBox.TabIndex = 46;
+            // 
+            // e_mailTextBox
+            // 
+            this.e_mailTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.e_mailTextBox.Location = new System.Drawing.Point(110, 109);
+            this.e_mailTextBox.Name = "e_mailTextBox";
+            this.e_mailTextBox.Size = new System.Drawing.Size(100, 20);
+            this.e_mailTextBox.TabIndex = 44;
+            // 
+            // lPRTextBox
+            // 
+            this.lPRTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.lPRTextBox.Location = new System.Drawing.Point(110, 83);
+            this.lPRTextBox.Name = "lPRTextBox";
+            this.lPRTextBox.Size = new System.Drawing.Size(100, 20);
+            this.lPRTextBox.TabIndex = 42;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.nameTextBox.Location = new System.Drawing.Point(110, 8);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 32;
+            // 
+            // contactFaceTextBox
+            // 
+            this.contactFaceTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.contactFaceTextBox.Location = new System.Drawing.Point(110, 57);
+            this.contactFaceTextBox.Name = "contactFaceTextBox";
+            this.contactFaceTextBox.Size = new System.Drawing.Size(100, 20);
+            this.contactFaceTextBox.TabIndex = 40;
+            // 
             // addressTextBox
             // 
+            this.addressTextBox.BackColor = System.Drawing.Color.MintCream;
             this.addressTextBox.Location = new System.Drawing.Point(110, 31);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(100, 20);
@@ -205,7 +225,9 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.partnershipCheckBox);
             this.panel1.Controls.Add(nameLabel);
             this.panel1.Controls.Add(this.rateCombobox);
             this.panel1.Controls.Add(this.addressTextBox);
@@ -225,79 +247,110 @@
             this.panel1.Controls.Add(this.lPRTextBox);
             this.panel1.Location = new System.Drawing.Point(12, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 349);
+            this.panel1.Size = new System.Drawing.Size(228, 375);
             this.panel1.TabIndex = 52;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.districtsToAddTreeView);
             this.panel2.Controls.Add(this.servicesToAddTreeView);
             this.panel2.Location = new System.Drawing.Point(246, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 349);
+            this.panel2.Size = new System.Drawing.Size(187, 375);
             this.panel2.TabIndex = 53;
+            // 
+            // districtsToAddTreeView
+            // 
+            this.districtsToAddTreeView.BackColor = System.Drawing.Color.MintCream;
+            this.districtsToAddTreeView.CheckBoxes = true;
+            this.districtsToAddTreeView.Location = new System.Drawing.Point(13, 247);
+            this.districtsToAddTreeView.Name = "districtsToAddTreeView";
+            this.districtsToAddTreeView.Size = new System.Drawing.Size(156, 112);
+            this.districtsToAddTreeView.TabIndex = 1;
             // 
             // servicesToAddTreeView
             // 
+            this.servicesToAddTreeView.BackColor = System.Drawing.Color.MintCream;
             this.servicesToAddTreeView.CheckBoxes = true;
-            this.servicesToAddTreeView.Location = new System.Drawing.Point(13, 8);
+            this.servicesToAddTreeView.Location = new System.Drawing.Point(13, 27);
             this.servicesToAddTreeView.Name = "servicesToAddTreeView";
             this.servicesToAddTreeView.Size = new System.Drawing.Size(156, 198);
             this.servicesToAddTreeView.TabIndex = 0;
             // 
-            // districtsToAddTreeView
+            // okButton
             // 
-            this.districtsToAddTreeView.CheckBoxes = true;
-            this.districtsToAddTreeView.Location = new System.Drawing.Point(13, 218);
-            this.districtsToAddTreeView.Name = "districtsToAddTreeView";
-            this.districtsToAddTreeView.Size = new System.Drawing.Size(156, 97);
-            this.districtsToAddTreeView.TabIndex = 1;
+            this.okButton.BackColor = System.Drawing.Color.MintCream;
+            this.okButton.Location = new System.Drawing.Point(76, 398);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(95, 27);
+            this.okButton.TabIndex = 54;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = false;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // AddRowToDatabaseButton
+            // cancelButton
             // 
-            this.AddRowToDatabaseButton.Location = new System.Drawing.Point(155, 375);
-            this.AddRowToDatabaseButton.Name = "AddRowToDatabaseButton";
-            this.AddRowToDatabaseButton.Size = new System.Drawing.Size(124, 35);
-            this.AddRowToDatabaseButton.TabIndex = 54;
-            this.AddRowToDatabaseButton.Text = "Додати до списку";
-            this.AddRowToDatabaseButton.UseVisualStyleBackColor = true;
+            this.cancelButton.BackColor = System.Drawing.Color.MintCream;
+            this.cancelButton.Location = new System.Drawing.Point(292, 398);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(95, 27);
+            this.cancelButton.TabIndex = 55;
+            this.cancelButton.Text = "Відмінити";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // returnButton
+            // partnershipCheckBox
             // 
-            this.returnButton.Location = new System.Drawing.Point(20, 375);
-            this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(119, 35);
-            this.returnButton.TabIndex = 55;
-            this.returnButton.Text = "Повернутись до списку";
-            this.returnButton.UseVisualStyleBackColor = true;
-            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            this.partnershipCheckBox.AutoSize = true;
+            this.partnershipCheckBox.ForeColor = System.Drawing.Color.Honeydew;
+            this.partnershipCheckBox.Location = new System.Drawing.Point(34, 351);
+            this.partnershipCheckBox.Name = "partnershipCheckBox";
+            this.partnershipCheckBox.Size = new System.Drawing.Size(145, 17);
+            this.partnershipCheckBox.TabIndex = 52;
+            this.partnershipCheckBox.Text = "Партнерська програма";
+            this.partnershipCheckBox.UseVisualStyleBackColor = true;
             // 
-            // exitButton
+            // label1
             // 
-            this.exitButton.Location = new System.Drawing.Point(298, 375);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(119, 35);
-            this.exitButton.TabIndex = 56;
-            this.exitButton.Text = "Вийти";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Honeydew;
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Послуги:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Honeydew;
+            this.label2.Location = new System.Drawing.Point(10, 231);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Райони:";
             // 
             // AddRowWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(445, 437);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.returnButton);
-            this.Controls.Add(this.AddRowToDatabaseButton);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.okButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AddRowWindow";
-            this.Text = "AddRowWindow";
+            this.Text = "Bamerra";
             this.Load += new System.EventHandler(this.AddRowWindow_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -317,8 +370,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TreeView districtsToAddTreeView;
         private System.Windows.Forms.TreeView servicesToAddTreeView;
-        private System.Windows.Forms.Button AddRowToDatabaseButton;
-        private System.Windows.Forms.Button returnButton;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button okButton;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.CheckBox partnershipCheckBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
