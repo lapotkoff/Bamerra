@@ -33,9 +33,9 @@ namespace Bamerra
                 sql_data_adapter.Fill(data_table);
                 if (data_table.Rows[0][0].ToString() == "1")
                 {
-                    AdminRightsMainPage admpage = new AdminRightsMainPage();
-                    admpage.Show();
                     this.Hide();
+                    AdminRightsMainPage admpage = new AdminRightsMainPage();
+                    admpage.ShowDialog();
                 }
                 else
                 {

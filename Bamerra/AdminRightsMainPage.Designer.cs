@@ -31,35 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminRightsMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.advancedDataGridView = new ADGV.AdvancedDataGridView();
-            this.informationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bamerraDataSet = new Bamerra.BamerraDataSet();
-            this.button1 = new System.Windows.Forms.Button();
-            this.AddRowButton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ServicesTreeView = new System.Windows.Forms.TreeView();
-            this.DistrictTreeView = new System.Windows.Forms.TreeView();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.createExcelFileButton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.nextButton = new System.Windows.Forms.Button();
             this.lastDataButton = new System.Windows.Forms.Button();
             this.firstDataButton = new System.Windows.Forms.Button();
             this.previousButton = new System.Windows.Forms.Button();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.customerNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateInSystemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.informationTableAdapter = new Bamerra.BamerraDataSetTableAdapters.InformationTableAdapter();
-            this.tableAdapterManager = new Bamerra.BamerraDataSetTableAdapters.TableAdapterManager();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.AddRowButton = new System.Windows.Forms.Button();
+            this.savechangesButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
-            this.deleteRowButton = new System.Windows.Forms.Button();
             this.changeRowButton = new System.Windows.Forms.Button();
+            this.deleteRowButton = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.advancedDataGridView = new ADGV.AdvancedDataGridView();
             this.rowIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +57,28 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partnershipProgramDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.informationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bamerraDataSet = new Bamerra.BamerraDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ServicesTreeView = new System.Windows.Forms.TreeView();
+            this.DistrictTreeView = new System.Windows.Forms.TreeView();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.customerNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateInSystemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.informationTableAdapter = new Bamerra.BamerraDataSetTableAdapters.InformationTableAdapter();
+            this.tableAdapterManager = new Bamerra.BamerraDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bamerraDataSet)).BeginInit();
@@ -83,21 +89,122 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.changeRowButton);
-            this.panel1.Controls.Add(this.deleteRowButton);
-            this.panel1.Controls.Add(this.printButton);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.advancedDataGridView);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.AddRowButton);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.exitButton);
-            this.panel1.Controls.Add(this.lastDataButton);
-            this.panel1.Controls.Add(this.firstDataButton);
-            this.panel1.Controls.Add(this.previousButton);
-            this.panel1.Controls.Add(this.nextButton);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // createExcelFileButton
+            // 
+            resources.ApplyResources(this.createExcelFileButton, "createExcelFileButton");
+            this.createExcelFileButton.BackColor = System.Drawing.Color.Honeydew;
+            this.createExcelFileButton.Name = "createExcelFileButton";
+            this.createExcelFileButton.UseVisualStyleBackColor = false;
+            this.createExcelFileButton.Click += new System.EventHandler(this.createExcelFileButton_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.nextButton);
+            this.panel3.Controls.Add(this.lastDataButton);
+            this.panel3.Controls.Add(this.firstDataButton);
+            this.panel3.Controls.Add(this.previousButton);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // nextButton
+            // 
+            resources.ApplyResources(this.nextButton, "nextButton");
+            this.nextButton.BackColor = System.Drawing.Color.Honeydew;
+            this.nextButton.Name = "nextButton";
+            this.toolTip1.SetToolTip(this.nextButton, resources.GetString("nextButton.ToolTip"));
+            this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // lastDataButton
+            // 
+            resources.ApplyResources(this.lastDataButton, "lastDataButton");
+            this.lastDataButton.BackColor = System.Drawing.Color.Honeydew;
+            this.lastDataButton.Name = "lastDataButton";
+            this.toolTip1.SetToolTip(this.lastDataButton, resources.GetString("lastDataButton.ToolTip"));
+            this.lastDataButton.UseVisualStyleBackColor = false;
+            this.lastDataButton.Click += new System.EventHandler(this.lastDataButton_Click);
+            // 
+            // firstDataButton
+            // 
+            resources.ApplyResources(this.firstDataButton, "firstDataButton");
+            this.firstDataButton.BackColor = System.Drawing.Color.Honeydew;
+            this.firstDataButton.Name = "firstDataButton";
+            this.toolTip1.SetToolTip(this.firstDataButton, resources.GetString("firstDataButton.ToolTip"));
+            this.firstDataButton.UseVisualStyleBackColor = false;
+            this.firstDataButton.Click += new System.EventHandler(this.firstDataButton_Click);
+            // 
+            // previousButton
+            // 
+            resources.ApplyResources(this.previousButton, "previousButton");
+            this.previousButton.BackColor = System.Drawing.Color.Honeydew;
+            this.previousButton.Name = "previousButton";
+            this.toolTip1.SetToolTip(this.previousButton, resources.GetString("previousButton.ToolTip"));
+            this.previousButton.UseVisualStyleBackColor = false;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.createExcelFileButton);
+            this.panel2.Controls.Add(this.AddRowButton);
+            this.panel2.Controls.Add(this.savechangesButton);
+            this.panel2.Controls.Add(this.printButton);
+            this.panel2.Controls.Add(this.changeRowButton);
+            this.panel2.Controls.Add(this.deleteRowButton);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // AddRowButton
+            // 
+            resources.ApplyResources(this.AddRowButton, "AddRowButton");
+            this.AddRowButton.BackColor = System.Drawing.Color.Honeydew;
+            this.AddRowButton.Name = "AddRowButton";
+            this.AddRowButton.UseVisualStyleBackColor = false;
+            this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
+            // 
+            // savechangesButton
+            // 
+            resources.ApplyResources(this.savechangesButton, "savechangesButton");
+            this.savechangesButton.BackColor = System.Drawing.Color.Honeydew;
+            this.savechangesButton.Name = "savechangesButton";
+            this.toolTip1.SetToolTip(this.savechangesButton, resources.GetString("savechangesButton.ToolTip"));
+            this.savechangesButton.UseVisualStyleBackColor = false;
+            this.savechangesButton.Click += new System.EventHandler(this.savechangesButton_Click);
+            // 
+            // printButton
+            // 
+            resources.ApplyResources(this.printButton, "printButton");
+            this.printButton.BackColor = System.Drawing.Color.Honeydew;
+            this.printButton.Name = "printButton";
+            this.printButton.UseVisualStyleBackColor = false;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
+            // changeRowButton
+            // 
+            resources.ApplyResources(this.changeRowButton, "changeRowButton");
+            this.changeRowButton.BackColor = System.Drawing.Color.Honeydew;
+            this.changeRowButton.Name = "changeRowButton";
+            this.changeRowButton.UseVisualStyleBackColor = false;
+            // 
+            // deleteRowButton
+            // 
+            resources.ApplyResources(this.deleteRowButton, "deleteRowButton");
+            this.deleteRowButton.BackColor = System.Drawing.Color.Honeydew;
+            this.deleteRowButton.Name = "deleteRowButton";
+            this.deleteRowButton.UseVisualStyleBackColor = false;
+            this.deleteRowButton.Click += new System.EventHandler(this.deleteRowButton_Click);
             // 
             // lblTotal
             // 
@@ -132,199 +239,6 @@
             this.advancedDataGridView.TimeFilter = false;
             this.advancedDataGridView.SortStringChanged += new System.EventHandler(this.advancedDataGridView_SortStringChanged);
             this.advancedDataGridView.FilterStringChanged += new System.EventHandler(this.advancedDataGridView_FilterStringChanged);
-            // 
-            // informationBindingSource
-            // 
-            this.informationBindingSource.DataMember = "Information";
-            this.informationBindingSource.DataSource = this.bamerraDataSet;
-            // 
-            // bamerraDataSet
-            // 
-            this.bamerraDataSet.DataSetName = "BamerraDataSet";
-            this.bamerraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.BackColor = System.Drawing.Color.Honeydew;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // AddRowButton
-            // 
-            resources.ApplyResources(this.AddRowButton, "AddRowButton");
-            this.AddRowButton.BackColor = System.Drawing.Color.Honeydew;
-            this.AddRowButton.Name = "AddRowButton";
-            this.AddRowButton.UseVisualStyleBackColor = false;
-            this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.MistyRose;
-            this.groupBox2.Controls.Add(this.ServicesTreeView);
-            this.groupBox2.Controls.Add(this.DistrictTreeView);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // ServicesTreeView
-            // 
-            this.ServicesTreeView.CheckBoxes = true;
-            resources.ApplyResources(this.ServicesTreeView, "ServicesTreeView");
-            this.ServicesTreeView.Name = "ServicesTreeView";
-            this.ServicesTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckServicesTreeView);
-            // 
-            // DistrictTreeView
-            // 
-            this.DistrictTreeView.CheckBoxes = true;
-            resources.ApplyResources(this.DistrictTreeView, "DistrictTreeView");
-            this.DistrictTreeView.Name = "DistrictTreeView";
-            this.DistrictTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckDistrictTreeView);
-            this.DistrictTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DistrictTreeView_AfterSelect);
-            // 
-            // exitButton
-            // 
-            resources.ApplyResources(this.exitButton, "exitButton");
-            this.exitButton.BackColor = System.Drawing.Color.Honeydew;
-            this.exitButton.Name = "exitButton";
-            this.toolTip1.SetToolTip(this.exitButton, resources.GetString("exitButton.ToolTip"));
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // lastDataButton
-            // 
-            resources.ApplyResources(this.lastDataButton, "lastDataButton");
-            this.lastDataButton.BackColor = System.Drawing.Color.Honeydew;
-            this.lastDataButton.Name = "lastDataButton";
-            this.toolTip1.SetToolTip(this.lastDataButton, resources.GetString("lastDataButton.ToolTip"));
-            this.lastDataButton.UseVisualStyleBackColor = false;
-            this.lastDataButton.Click += new System.EventHandler(this.lastDataButton_Click);
-            // 
-            // firstDataButton
-            // 
-            resources.ApplyResources(this.firstDataButton, "firstDataButton");
-            this.firstDataButton.BackColor = System.Drawing.Color.Honeydew;
-            this.firstDataButton.Name = "firstDataButton";
-            this.toolTip1.SetToolTip(this.firstDataButton, resources.GetString("firstDataButton.ToolTip"));
-            this.firstDataButton.UseVisualStyleBackColor = false;
-            this.firstDataButton.Click += new System.EventHandler(this.firstDataButton_Click);
-            // 
-            // previousButton
-            // 
-            resources.ApplyResources(this.previousButton, "previousButton");
-            this.previousButton.BackColor = System.Drawing.Color.Honeydew;
-            this.previousButton.Name = "previousButton";
-            this.toolTip1.SetToolTip(this.previousButton, resources.GetString("previousButton.ToolTip"));
-            this.previousButton.UseVisualStyleBackColor = false;
-            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
-            // 
-            // nextButton
-            // 
-            resources.ApplyResources(this.nextButton, "nextButton");
-            this.nextButton.BackColor = System.Drawing.Color.Honeydew;
-            this.nextButton.Name = "nextButton";
-            this.toolTip1.SetToolTip(this.nextButton, resources.GetString("nextButton.ToolTip"));
-            this.nextButton.UseVisualStyleBackColor = false;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            // 
-            // customerNoDataGridViewTextBoxColumn
-            // 
-            this.customerNoDataGridViewTextBoxColumn.DataPropertyName = "CustomerNo";
-            resources.ApplyResources(this.customerNoDataGridViewTextBoxColumn, "customerNoDataGridViewTextBoxColumn");
-            this.customerNoDataGridViewTextBoxColumn.Name = "customerNoDataGridViewTextBoxColumn";
-            this.customerNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // fNameDataGridViewTextBoxColumn
-            // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
-            resources.ApplyResources(this.fNameDataGridViewTextBoxColumn, "fNameDataGridViewTextBoxColumn");
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
-            this.fNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // lNameDataGridViewTextBoxColumn
-            // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "LName";
-            resources.ApplyResources(this.lNameDataGridViewTextBoxColumn, "lNameDataGridViewTextBoxColumn");
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
-            this.lNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // mNameDataGridViewTextBoxColumn
-            // 
-            this.mNameDataGridViewTextBoxColumn.DataPropertyName = "MName";
-            resources.ApplyResources(this.mNameDataGridViewTextBoxColumn, "mNameDataGridViewTextBoxColumn");
-            this.mNameDataGridViewTextBoxColumn.Name = "mNameDataGridViewTextBoxColumn";
-            this.mNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // address1DataGridViewTextBoxColumn
-            // 
-            this.address1DataGridViewTextBoxColumn.DataPropertyName = "Address1";
-            resources.ApplyResources(this.address1DataGridViewTextBoxColumn, "address1DataGridViewTextBoxColumn");
-            this.address1DataGridViewTextBoxColumn.Name = "address1DataGridViewTextBoxColumn";
-            this.address1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // address2DataGridViewTextBoxColumn
-            // 
-            this.address2DataGridViewTextBoxColumn.DataPropertyName = "Address2";
-            resources.ApplyResources(this.address2DataGridViewTextBoxColumn, "address2DataGridViewTextBoxColumn");
-            this.address2DataGridViewTextBoxColumn.Name = "address2DataGridViewTextBoxColumn";
-            this.address2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            resources.ApplyResources(this.cityDataGridViewTextBoxColumn, "cityDataGridViewTextBoxColumn");
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            resources.ApplyResources(this.phoneDataGridViewTextBoxColumn, "phoneDataGridViewTextBoxColumn");
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dateInSystemDataGridViewTextBoxColumn
-            // 
-            this.dateInSystemDataGridViewTextBoxColumn.DataPropertyName = "DateInSystem";
-            resources.ApplyResources(this.dateInSystemDataGridViewTextBoxColumn, "dateInSystemDataGridViewTextBoxColumn");
-            this.dateInSystemDataGridViewTextBoxColumn.Name = "dateInSystemDataGridViewTextBoxColumn";
-            this.dateInSystemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // informationTableAdapter
-            // 
-            this.informationTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AdminPasswordsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.InformationTableAdapter = this.informationTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Bamerra.BamerraDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UserPasswordsTableAdapter = null;
-            // 
-            // printButton
-            // 
-            resources.ApplyResources(this.printButton, "printButton");
-            this.printButton.BackColor = System.Drawing.Color.Honeydew;
-            this.printButton.Name = "printButton";
-            this.printButton.UseVisualStyleBackColor = false;
-            this.printButton.Click += new System.EventHandler(this.printButton_Click);
-            // 
-            // deleteRowButton
-            // 
-            resources.ApplyResources(this.deleteRowButton, "deleteRowButton");
-            this.deleteRowButton.BackColor = System.Drawing.Color.Honeydew;
-            this.deleteRowButton.Name = "deleteRowButton";
-            this.deleteRowButton.UseVisualStyleBackColor = false;
-            // 
-            // changeRowButton
-            // 
-            resources.ApplyResources(this.changeRowButton, "changeRowButton");
-            this.changeRowButton.BackColor = System.Drawing.Color.Honeydew;
-            this.changeRowButton.Name = "changeRowButton";
-            this.changeRowButton.UseVisualStyleBackColor = false;
             // 
             // rowIDDataGridViewTextBoxColumn
             // 
@@ -412,6 +326,133 @@
             this.partnershipProgramDataGridViewCheckBoxColumn.Name = "partnershipProgramDataGridViewCheckBoxColumn";
             this.partnershipProgramDataGridViewCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // informationBindingSource
+            // 
+            this.informationBindingSource.DataMember = "Information";
+            this.informationBindingSource.DataSource = this.bamerraDataSet;
+            // 
+            // bamerraDataSet
+            // 
+            this.bamerraDataSet.DataSetName = "BamerraDataSet";
+            this.bamerraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.MistyRose;
+            this.groupBox2.Controls.Add(this.ServicesTreeView);
+            this.groupBox2.Controls.Add(this.DistrictTreeView);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // ServicesTreeView
+            // 
+            this.ServicesTreeView.CheckBoxes = true;
+            resources.ApplyResources(this.ServicesTreeView, "ServicesTreeView");
+            this.ServicesTreeView.Name = "ServicesTreeView";
+            this.ServicesTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckServicesTreeView);
+            // 
+            // DistrictTreeView
+            // 
+            this.DistrictTreeView.CheckBoxes = true;
+            resources.ApplyResources(this.DistrictTreeView, "DistrictTreeView");
+            this.DistrictTreeView.Name = "DistrictTreeView";
+            this.DistrictTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckDistrictTreeView);
+            this.DistrictTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DistrictTreeView_AfterSelect);
+            // 
+            // exitButton
+            // 
+            resources.ApplyResources(this.exitButton, "exitButton");
+            this.exitButton.BackColor = System.Drawing.Color.Honeydew;
+            this.exitButton.Name = "exitButton";
+            this.toolTip1.SetToolTip(this.exitButton, resources.GetString("exitButton.ToolTip"));
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // customerNoDataGridViewTextBoxColumn
+            // 
+            this.customerNoDataGridViewTextBoxColumn.DataPropertyName = "CustomerNo";
+            resources.ApplyResources(this.customerNoDataGridViewTextBoxColumn, "customerNoDataGridViewTextBoxColumn");
+            this.customerNoDataGridViewTextBoxColumn.Name = "customerNoDataGridViewTextBoxColumn";
+            this.customerNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // fNameDataGridViewTextBoxColumn
+            // 
+            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
+            resources.ApplyResources(this.fNameDataGridViewTextBoxColumn, "fNameDataGridViewTextBoxColumn");
+            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.fNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // lNameDataGridViewTextBoxColumn
+            // 
+            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "LName";
+            resources.ApplyResources(this.lNameDataGridViewTextBoxColumn, "lNameDataGridViewTextBoxColumn");
+            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            this.lNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // mNameDataGridViewTextBoxColumn
+            // 
+            this.mNameDataGridViewTextBoxColumn.DataPropertyName = "MName";
+            resources.ApplyResources(this.mNameDataGridViewTextBoxColumn, "mNameDataGridViewTextBoxColumn");
+            this.mNameDataGridViewTextBoxColumn.Name = "mNameDataGridViewTextBoxColumn";
+            this.mNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // address1DataGridViewTextBoxColumn
+            // 
+            this.address1DataGridViewTextBoxColumn.DataPropertyName = "Address1";
+            resources.ApplyResources(this.address1DataGridViewTextBoxColumn, "address1DataGridViewTextBoxColumn");
+            this.address1DataGridViewTextBoxColumn.Name = "address1DataGridViewTextBoxColumn";
+            this.address1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // address2DataGridViewTextBoxColumn
+            // 
+            this.address2DataGridViewTextBoxColumn.DataPropertyName = "Address2";
+            resources.ApplyResources(this.address2DataGridViewTextBoxColumn, "address2DataGridViewTextBoxColumn");
+            this.address2DataGridViewTextBoxColumn.Name = "address2DataGridViewTextBoxColumn";
+            this.address2DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            resources.ApplyResources(this.cityDataGridViewTextBoxColumn, "cityDataGridViewTextBoxColumn");
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            resources.ApplyResources(this.phoneDataGridViewTextBoxColumn, "phoneDataGridViewTextBoxColumn");
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dateInSystemDataGridViewTextBoxColumn
+            // 
+            this.dateInSystemDataGridViewTextBoxColumn.DataPropertyName = "DateInSystem";
+            resources.ApplyResources(this.dateInSystemDataGridViewTextBoxColumn, "dateInSystemDataGridViewTextBoxColumn");
+            this.dateInSystemDataGridViewTextBoxColumn.Name = "dateInSystemDataGridViewTextBoxColumn";
+            this.dateInSystemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // informationTableAdapter
+            // 
+            this.informationTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AdminPasswordsTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.InformationTableAdapter = this.informationTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Bamerra.BamerraDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserPasswordsTableAdapter = null;
+            // 
             // AdminRightsMainPage
             // 
             resources.ApplyResources(this, "$this");
@@ -419,9 +460,11 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.Controls.Add(this.panel1);
             this.Name = "AdminRightsMainPage";
-            this.Load += new System.EventHandler(this.AdminRightsMainPage_Load);
+            this.Load += new System.EventHandler(this.AdminMainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bamerraDataSet)).EndInit();
@@ -484,5 +527,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn partnershipProgramDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button savechangesButton;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button createExcelFileButton;
     }
 }

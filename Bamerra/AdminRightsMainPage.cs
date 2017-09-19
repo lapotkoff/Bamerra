@@ -11,6 +11,8 @@ using System.IO;
 using System.Data.SqlClient;
 using System.Data.Common;
 using DGVPrinterHelper;
+using Bamerra.Commands;
+using Microsoft.Office.Interop.Excel;
 
 namespace Bamerra
 {
@@ -21,7 +23,6 @@ namespace Bamerra
         private string connection_string = Properties.Settings.Default.BamerraConnectionString;
         private string command_string = "Select * FROM Information";
         private string RowFilter = "";
-        private DataTable information = new DataTable("Information");
 
         #region Loading tools
         private void LoadServicesTreeView()
@@ -98,72 +99,77 @@ namespace Bamerra
             InitializeComponent();
         }
 
-        private void AdminRightsMainPage_Load(object sender, EventArgs e)
+        private void AdminMainPage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bamerraDataSet.Information' table. You can move, or remove it, as needed.
             this.informationTableAdapter.Fill(this.bamerraDataSet.Information);
-
+            this.informationTableAdapter.Adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+            DBManager.ConfigureinformationAdapter(this.informationTableAdapter.Adapter);
+            this.informationTableAdapter.Adapter.FillSchema(this.bamerraDataSet.Information, SchemaType.Mapped);
+            this.bamerraDataSet.Information.Columns[0].AutoIncrementSeed = -1;
+            this.bamerraDataSet.Information.Columns[0].AutoIncrementStep = -1;
+            //advancedDataGridView.DataSource = this.bamerraDataSet.Information;
             lblTotal.Text = string.Format("Загальна кількість рядків: {0}", informationBindingSource.Count);
             //встановлюємо з'єднання, витягуємо всю інфу з таблиці Info і відображаємо
             //колонки в datagridview так як нам треба
-
-
-            //using (SqlConnection sql_connection = new SqlConnection(connection_string))
-            //{
-            //    DataSet data_set = new DataSet();
-
-            //    SqlDataAdapter sql_data_adapter = new SqlDataAdapter("Select * FROM Info", sql_connection);
-
-            //    sql_data_adapter.MissingMappingAction = MissingMappingAction.Passthrough;
-
-            //    //заставляємо адаптер даних створювати обмеження для таблиці
-            //    sql_data_adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-
-            //    DataTableMapping informationMapping = sql_data_adapter.TableMappings.Add("Table","Info");
-            //    var infoColumnMappings = new DataColumnMapping[]
-            //    {
-            //        new DataColumnMapping("Name", "Ім'я"),          
-            //        new DataColumnMapping("Services", "Послуги"),   
-            //        new DataColumnMapping("Address","Адреса"),      
-            //        new DataColumnMapping("District","Район"),      
-            //        new DataColumnMapping("ContactFace","Контактне обличчя"),
-            //        new DataColumnMapping("LPR","ЛПР"),
-            //        new DataColumnMapping("E-mail","E-mail"),
-            //        new DataColumnMapping("Description","Опис"),
-            //        new DataColumnMapping("CompletedProjects","Виконані проекти"),
-            //        new DataColumnMapping("Rate","Рейтинг")
-            //    };
-            //    informationMapping.ColumnMappings.AddRange(infoColumnMappings);
-
-            //    sql_data_adapter.Fill(data_set);
-
-
-            //    advancedDataGridView.DataSource = data_set.Tables[0];
-            //    dataGridView1.DataSource = data_set.Tables[0];
-
-            //}
-
-
             LoadServicesTreeView();
             LoadDistrictTreeView();
+            this.informationTableAdapter.Adapter.RowUpdated += adapter_RowUpdated;
             RowsColor();
-            //this.advancedDataGridView.RowHeadersVisible = false;       ?????
+            //        //this.advancedDataGridView.RowHeadersVisible = false;       ?????
+            //        //advancedDataGridView.ReadOnly = true;
+        }
 
+        void adapter_RowUpdated(object sender, SqlRowUpdatedEventArgs e)
+        {
+            if (e.StatementType == StatementType.Insert)
+            {
+                var insertedRow = e.Row;
 
+                try
+                {
+                    insertedRow.Table.Columns[0].ReadOnly = false;
 
-            //SqlDataAdapter adapter = new SqlDataAdapter(command_string, connection_string);
-            //adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            //adapter.Fill(information);
-
-            //advancedDataGridView.ReadOnly = true;
-            //advancedDataGridView.DataSource = information;
-
+                    insertedRow[0] = e.Command.Parameters["NewRowID"].Value;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    insertedRow.Table.Columns[0].ReadOnly = true;
+                }
+            }
         }
 
         #region Button Events
+
         private void AddRowButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.DialogResult result = new AddRowWindow(this.bamerraDataSet.Information).ShowDialog();
+        }
+
+        private void deleteRowButton_Click(object sender, EventArgs e)
+        {
+            if (advancedDataGridView.SelectedRows.Count > 0)
+            {
+                int selectedIndex = advancedDataGridView.SelectedRows[0].Index;
+
+                DataRow deleterow = bamerraDataSet.Information.NewRow();
+                deleterow["RowID"] = int.Parse(advancedDataGridView[0, selectedIndex].Value.ToString());
+                // string sql = "DELETE FROM Table1 WHERE RowID = @RowID";
+                try
+                {
+                    DBManager.DeleteInformation(deleterow);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                // your code for deleting it from the database
+
+                // then your code for refreshing the DataGridView
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -172,7 +178,7 @@ namespace Bamerra
             iExit = MessageBox.Show("Ви дійсно хочете вийти?", "Bamerra", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(iExit == DialogResult.Yes)
             {
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
             }
         }
 
@@ -212,6 +218,62 @@ namespace Bamerra
             printer.printDocument.DefaultPageSettings.Landscape = true;
             printer.PrintDataGridView(advancedDataGridView);
         }
+
+        private void savechangesButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.informationBindingSource.EndEdit();
+                this.informationTableAdapter.Update(this.bamerraDataSet.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                RowsColor();
+                lblTotal.Text = string.Format("Загальна кількість рядків: {0}", informationBindingSource.Count);
+            }
+            //this.bamerraDataSet.Information.Clear();
+
+            //this.informationTableAdapter.Adapter.Fill(this.bamerraDataSet.Information);
+            //RowsColor();
+        }
+
+        private void createExcelFileButton_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xls" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = sfd.FileName;
+                    Microsoft.Office.Interop.Excel.Application excelfile = new Microsoft.Office.Interop.Excel.Application();
+                    Workbook wb = excelfile.Workbooks.Add(XlSheetType.xlWorksheet);
+                    Worksheet ws = (Worksheet)excelfile.ActiveSheet;
+                    excelfile.Visible = false;
+
+                    for (int i = 1; i <= bamerraDataSet.Information.Columns.Count; i++)
+                    {
+                        ws.Cells[1, i] = advancedDataGridView.Columns[i - 1].HeaderText.ToString();
+                    }
+                    for (int i = 1; i <= informationBindingSource.Count; i++)
+                    {
+                        for (int j = 0; j < bamerraDataSet.Information.Columns.Count; j++)
+                        {
+                            if (advancedDataGridView[i - 1, j].Value != null)
+                            {
+                                ws.Cells[i + 1, j + 1] = advancedDataGridView[j, i - 1].Value.ToString();
+                            }
+                        }
+                    }
+                    ws.SaveAs(filename, XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, true, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlLocalSessionChanges, Type.Missing, Type.Missing);
+                    excelfile.Quit();
+                }
+            }
+        }
+
         #endregion
 
         #region All about TreeView
@@ -300,15 +362,15 @@ namespace Bamerra
         #region Test button
         private void button1_Click(object sender, EventArgs e)
         {
-            FindAllCheckedNodes(DistrictTreeView.TopNode, " District ");
-            DataTable filteredtable = new DataTable();
-            filteredtable.TableName = "FilteredInfo";
-            SqlDataAdapter adapter = new SqlDataAdapter(command_string, connection_string);
-            adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            adapter.Fill(filteredtable);
-            DataView filteredView = new DataView(filteredtable, RowFilter, "District", DataViewRowState.CurrentRows);
-            //dataGridView1.DataSource = filteredView;
-            RowFilter = "";
+           // FindAllCheckedNodes(DistrictTreeView.TopNode, " District ");
+           // DataTable filteredtable = new DataTable();
+           // filteredtable.TableName = "FilteredInfo";
+           // SqlDataAdapter adapter = new SqlDataAdapter(command_string, connection_string);
+           // adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+           // adapter.Fill(filteredtable);
+           // DataView filteredView = new DataView(filteredtable, RowFilter, "District", DataViewRowState.CurrentRows);
+           // //dataGridView1.DataSource = filteredView;
+           // RowFilter = "";
         }
         #endregion
 
@@ -316,6 +378,7 @@ namespace Bamerra
         private void advancedDataGridView_FilterStringChanged(object sender, EventArgs e)
         {
             informationBindingSource.Filter = this.advancedDataGridView.FilterString;
+            RowsColor();
         }
 
         private void advancedDataGridView_SortStringChanged(object sender, EventArgs e)
@@ -331,7 +394,7 @@ namespace Bamerra
 
         public void RowsColor()
         {
-            for(int i=0; i<advancedDataGridView.Rows.Count; i++)
+            for(int i=0; i<informationBindingSource.Count; i++)
             {
                 if(i%2 == 1)
                 {
@@ -340,11 +403,12 @@ namespace Bamerra
                 string partnership = advancedDataGridView.Rows[i].Cells[11].Value.ToString();
                 if(partnership == "True")
                 {
-                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Purple;
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.MistyRose;
                 }
 
 
             }
         }
+
     }
 }

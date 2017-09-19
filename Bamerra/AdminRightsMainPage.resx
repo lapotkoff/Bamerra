@@ -117,74 +117,179 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="changeRowButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="&gt;&gt;nextButton.Name" xml:space="preserve">
+    <value>nextButton</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="changeRowButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="changeRowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="changeRowButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>644, 421</value>
-  </data>
-  <data name="changeRowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="changeRowButton.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="changeRowButton.Text" xml:space="preserve">
-    <value>Змінити</value>
-  </data>
-  <data name="&gt;&gt;changeRowButton.Name" xml:space="preserve">
-    <value>changeRowButton</value>
-  </data>
-  <data name="&gt;&gt;changeRowButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;nextButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;changeRowButton.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;nextButton.Parent" xml:space="preserve">
+    <value>panel3</value>
   </data>
-  <data name="&gt;&gt;changeRowButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;nextButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="deleteRowButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="&gt;&gt;lastDataButton.Name" xml:space="preserve">
+    <value>lastDataButton</value>
   </data>
-  <data name="deleteRowButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="deleteRowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="deleteRowButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 421</value>
-  </data>
-  <data name="deleteRowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="deleteRowButton.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="deleteRowButton.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="&gt;&gt;deleteRowButton.Name" xml:space="preserve">
-    <value>deleteRowButton</value>
-  </data>
-  <data name="&gt;&gt;deleteRowButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;lastDataButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;deleteRowButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lastDataButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lastDataButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.Name" xml:space="preserve">
+    <value>firstDataButton</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;previousButton.Name" xml:space="preserve">
+    <value>previousButton</value>
+  </data>
+  <data name="&gt;&gt;previousButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;previousButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;previousButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 12</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 199</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;deleteRowButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="createExcelFileButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="createExcelFileButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="createExcelFileButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="createExcelFileButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 7</value>
+  </data>
+  <data name="createExcelFileButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 84</value>
+  </data>
+  <data name="createExcelFileButton.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="createExcelFileButton.Text" xml:space="preserve">
+    <value>Створити Excel файл</value>
+  </data>
+  <data name="&gt;&gt;createExcelFileButton.Name" xml:space="preserve">
+    <value>createExcelFileButton</value>
+  </data>
+  <data name="&gt;&gt;createExcelFileButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;createExcelFileButton.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;createExcelFileButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AddRowButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="AddRowButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="AddRowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddRowButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 7</value>
+  </data>
+  <data name="AddRowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="AddRowButton.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="AddRowButton.Text" xml:space="preserve">
+    <value>Додати </value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.Name" xml:space="preserve">
+    <value>AddRowButton</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="savechangesButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="savechangesButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="savechangesButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="savechangesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 7</value>
+  </data>
+  <data name="savechangesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 86</value>
+  </data>
+  <data name="savechangesButton.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="savechangesButton.Text" xml:space="preserve">
+    <value>Зберегти зміни</value>
+  </data>
+  <data name="savechangesButton.ToolTip" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="&gt;&gt;savechangesButton.Name" xml:space="preserve">
+    <value>savechangesButton</value>
+  </data>
+  <data name="&gt;&gt;savechangesButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;savechangesButton.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;savechangesButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="printButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -196,7 +301,7 @@
     <value>NoControl</value>
   </data>
   <data name="printButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 421</value>
+    <value>136, 53</value>
   </data>
   <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 40</value>
@@ -214,10 +319,97 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;printButton.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;printButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="changeRowButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="changeRowButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="changeRowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="changeRowButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 7</value>
+  </data>
+  <data name="changeRowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="changeRowButton.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="changeRowButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="&gt;&gt;changeRowButton.Name" xml:space="preserve">
+    <value>changeRowButton</value>
+  </data>
+  <data name="&gt;&gt;changeRowButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changeRowButton.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;changeRowButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="deleteRowButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="deleteRowButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="deleteRowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="deleteRowButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 53</value>
+  </data>
+  <data name="deleteRowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="deleteRowButton.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="deleteRowButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="&gt;&gt;deleteRowButton.Name" xml:space="preserve">
+    <value>deleteRowButton</value>
+  </data>
+  <data name="&gt;&gt;deleteRowButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteRowButton.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;deleteRowButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 343</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 109</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblTotal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -250,6 +442,312 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;lblTotal.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="informationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>275, 17</value>
+  </metadata>
+  <data name="advancedDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 12</value>
+  </data>
+  <data name="advancedDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>931, 325</value>
+  </data>
+  <data name="advancedDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;advancedDataGridView.Name" xml:space="preserve">
+    <value>advancedDataGridView</value>
+  </data>
+  <data name="&gt;&gt;advancedDataGridView.Type" xml:space="preserve">
+    <value>ADGV.AdvancedDataGridView, AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;advancedDataGridView.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;advancedDataGridView.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 226</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ServicesTreeView.Name" xml:space="preserve">
+    <value>ServicesTreeView</value>
+  </data>
+  <data name="&gt;&gt;ServicesTreeView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ServicesTreeView.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;ServicesTreeView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DistrictTreeView.Name" xml:space="preserve">
+    <value>DistrictTreeView</value>
+  </data>
+  <data name="&gt;&gt;DistrictTreeView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DistrictTreeView.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;DistrictTreeView.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 273</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 163</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Фільтри</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="exitButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="exitButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="exitButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1015, 432</value>
+  </data>
+  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="exitButton.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="exitButton.Text" xml:space="preserve">
+    <value>Вихід</value>
+  </data>
+  <data name="exitButton.ToolTip" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
+    <value>exitButton</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitButton.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 7</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1156, 487</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="nextButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="nextButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="nextButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="nextButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 10</value>
+  </data>
+  <data name="nextButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="nextButton.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="nextButton.Text" xml:space="preserve">
+    <value>Наступна</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>38, 17</value>
+  </metadata>
+  <data name="nextButton.ToolTip" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="&gt;&gt;nextButton.Name" xml:space="preserve">
+    <value>nextButton</value>
+  </data>
+  <data name="&gt;&gt;nextButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nextButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;nextButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lastDataButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lastDataButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lastDataButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lastDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 148</value>
+  </data>
+  <data name="lastDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="lastDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="lastDataButton.Text" xml:space="preserve">
+    <value>Остання</value>
+  </data>
+  <data name="lastDataButton.ToolTip" xml:space="preserve">
+    <value>Last Data</value>
+  </data>
+  <data name="&gt;&gt;lastDataButton.Name" xml:space="preserve">
+    <value>lastDataButton</value>
+  </data>
+  <data name="&gt;&gt;lastDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lastDataButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lastDataButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="firstDataButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="firstDataButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="firstDataButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="firstDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 102</value>
+  </data>
+  <data name="firstDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="firstDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="firstDataButton.Text" xml:space="preserve">
+    <value>Перша</value>
+  </data>
+  <data name="firstDataButton.ToolTip" xml:space="preserve">
+    <value>First Data</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.Name" xml:space="preserve">
+    <value>firstDataButton</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;firstDataButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="previousButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="previousButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="previousButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="previousButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 56</value>
+  </data>
+  <data name="previousButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 40</value>
+  </data>
+  <data name="previousButton.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="previousButton.Text" xml:space="preserve">
+    <value>Попередня</value>
+  </data>
+  <data name="previousButton.ToolTip" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="&gt;&gt;previousButton.Name" xml:space="preserve">
+    <value>previousButton</value>
+  </data>
+  <data name="&gt;&gt;previousButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;previousButton.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;previousButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="rowIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
@@ -330,342 +828,6 @@
   <metadata name="bamerraDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>135, 17</value>
   </metadata>
-  <data name="advancedDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
-  </data>
-  <data name="advancedDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>931, 350</value>
-  </data>
-  <data name="advancedDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;advancedDataGridView.Name" xml:space="preserve">
-    <value>advancedDataGridView</value>
-  </data>
-  <data name="&gt;&gt;advancedDataGridView.Type" xml:space="preserve">
-    <value>ADGV.AdvancedDataGridView, AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;advancedDataGridView.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;advancedDataGridView.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1015, 392</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="AddRowButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="AddRowButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="AddRowButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="AddRowButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 421</value>
-  </data>
-  <data name="AddRowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="AddRowButton.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="AddRowButton.Text" xml:space="preserve">
-    <value>Додати </value>
-  </data>
-  <data name="&gt;&gt;AddRowButton.Name" xml:space="preserve">
-    <value>AddRowButton</value>
-  </data>
-  <data name="&gt;&gt;AddRowButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddRowButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;AddRowButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ServicesTreeView.Name" xml:space="preserve">
-    <value>ServicesTreeView</value>
-  </data>
-  <data name="&gt;&gt;ServicesTreeView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ServicesTreeView.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;ServicesTreeView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DistrictTreeView.Name" xml:space="preserve">
-    <value>DistrictTreeView</value>
-  </data>
-  <data name="&gt;&gt;DistrictTreeView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DistrictTreeView.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;DistrictTreeView.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 3</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 412</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Фільтри</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>38, 17</value>
-  </metadata>
-  <data name="exitButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="exitButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="exitButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1015, 432</value>
-  </data>
-  <data name="exitButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="exitButton.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="exitButton.Text" xml:space="preserve">
-    <value>Вихід</value>
-  </data>
-  <data name="exitButton.ToolTip" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="&gt;&gt;exitButton.Name" xml:space="preserve">
-    <value>exitButton</value>
-  </data>
-  <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exitButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lastDataButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="lastDataButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="lastDataButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lastDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 375</value>
-  </data>
-  <data name="lastDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="lastDataButton.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="lastDataButton.Text" xml:space="preserve">
-    <value>Остання</value>
-  </data>
-  <data name="lastDataButton.ToolTip" xml:space="preserve">
-    <value>Last Data</value>
-  </data>
-  <data name="&gt;&gt;lastDataButton.Name" xml:space="preserve">
-    <value>lastDataButton</value>
-  </data>
-  <data name="&gt;&gt;lastDataButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lastDataButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;lastDataButton.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="firstDataButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="firstDataButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="firstDataButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="firstDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>644, 375</value>
-  </data>
-  <data name="firstDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="firstDataButton.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="firstDataButton.Text" xml:space="preserve">
-    <value>Перша</value>
-  </data>
-  <data name="firstDataButton.ToolTip" xml:space="preserve">
-    <value>First Data</value>
-  </data>
-  <data name="&gt;&gt;firstDataButton.Name" xml:space="preserve">
-    <value>firstDataButton</value>
-  </data>
-  <data name="&gt;&gt;firstDataButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;firstDataButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;firstDataButton.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="previousButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="previousButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="previousButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="previousButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 375</value>
-  </data>
-  <data name="previousButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="previousButton.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="previousButton.Text" xml:space="preserve">
-    <value>Попередня</value>
-  </data>
-  <data name="previousButton.ToolTip" xml:space="preserve">
-    <value>Previous</value>
-  </data>
-  <data name="&gt;&gt;previousButton.Name" xml:space="preserve">
-    <value>previousButton</value>
-  </data>
-  <data name="&gt;&gt;previousButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;previousButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;previousButton.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="nextButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="nextButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="nextButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="nextButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 375</value>
-  </data>
-  <data name="nextButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 40</value>
-  </data>
-  <data name="nextButton.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="nextButton.Text" xml:space="preserve">
-    <value>Наступна</value>
-  </data>
-  <data name="nextButton.ToolTip" xml:space="preserve">
-    <value>Next</value>
-  </data>
-  <data name="&gt;&gt;nextButton.Name" xml:space="preserve">
-    <value>nextButton</value>
-  </data>
-  <data name="&gt;&gt;nextButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nextButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;nextButton.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 7</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1156, 487</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="bamerraDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>135, 17</value>
   </metadata>
@@ -673,7 +835,7 @@
     <value>16, 19</value>
   </data>
   <data name="ServicesTreeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 228</value>
+    <value>142, 53</value>
   </data>
   <data name="ServicesTreeView.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -691,10 +853,10 @@
     <value>0</value>
   </data>
   <data name="DistrictTreeView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 253</value>
+    <value>16, 89</value>
   </data>
   <data name="DistrictTreeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 143</value>
+    <value>142, 42</value>
   </data>
   <data name="DistrictTreeView.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -765,9 +927,6 @@
   <data name="dateInSystemDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>38, 17</value>
-  </metadata>
   <metadata name="informationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>469, 17</value>
   </metadata>
@@ -788,6 +947,78 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Bamerra</value>
+  </data>
+  <data name="&gt;&gt;rowIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>rowIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;rowIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewLinkColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn7</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn8</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn9</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn10</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;partnershipProgramDataGridViewCheckBoxColumn.Name" xml:space="preserve">
+    <value>partnershipProgramDataGridViewCheckBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;partnershipProgramDataGridViewCheckBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;informationBindingSource.Name" xml:space="preserve">
     <value>informationBindingSource</value>
@@ -872,78 +1103,6 @@
   </data>
   <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
     <value>Bamerra.BamerraDataSetTableAdapters.TableAdapterManager, BamerraDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rowIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>rowIDDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;rowIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewLinkColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn4</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn5</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn6</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn7</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn8</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn9</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn10</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;partnershipProgramDataGridViewCheckBoxColumn.Name" xml:space="preserve">
-    <value>partnershipProgramDataGridViewCheckBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;partnershipProgramDataGridViewCheckBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AdminRightsMainPage</value>
