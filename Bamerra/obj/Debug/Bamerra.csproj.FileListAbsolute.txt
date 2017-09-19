@@ -18,8 +18,6 @@ C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.pdb
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.AdminRightsMainPage.uk.resources
 C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\uk\Bamerra.resources.dll
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\uk\Bamerra.resources.dll
-C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\Bamerra.mdf
-C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\Bamerra_log.ldf
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.csprojResolveAssemblyReference.cache
 C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\EntityFramework.dll
 C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\EntityFramework.SqlServer.dll

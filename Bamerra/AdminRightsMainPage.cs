@@ -105,12 +105,9 @@ namespace Bamerra
             this.informationTableAdapter.Adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             DBManager.ConfigureinformationAdapter(this.informationTableAdapter.Adapter);
             this.informationTableAdapter.Adapter.FillSchema(this.bamerraDataSet.Information, SchemaType.Mapped);
-            this.bamerraDataSet.Information.Columns[0].AutoIncrementSeed = -1;
-            this.bamerraDataSet.Information.Columns[0].AutoIncrementStep = -1;
-            //advancedDataGridView.DataSource = this.bamerraDataSet.Information;
+            this.bamerraDataSet.Information.Columns[0].AutoIncrementSeed = 1;
+            this.bamerraDataSet.Information.Columns[0].AutoIncrementStep = 1;
             lblTotal.Text = string.Format("Загальна кількість рядків: {0}", informationBindingSource.Count);
-            //встановлюємо з'єднання, витягуємо всю інфу з таблиці Info і відображаємо
-            //колонки в datagridview так як нам треба
             LoadServicesTreeView();
             LoadDistrictTreeView();
             this.informationTableAdapter.Adapter.RowUpdated += adapter_RowUpdated;
@@ -160,15 +157,18 @@ namespace Bamerra
                 // string sql = "DELETE FROM Table1 WHERE RowID = @RowID";
                 try
                 {
+                    advancedDataGridView.Rows.RemoveAt(selectedIndex);
                     DBManager.DeleteInformation(deleterow);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                // your code for deleting it from the database
-
-                // then your code for refreshing the DataGridView
+                finally
+                {
+                    RowsColor();
+                    lblTotal.Text = string.Format("Загальна кількість рядків: {0}", informationBindingSource.Count);
+                }
             }
         }
 
@@ -262,7 +262,7 @@ namespace Bamerra
                     {
                         for (int j = 0; j < bamerraDataSet.Information.Columns.Count; j++)
                         {
-                            if (advancedDataGridView[i - 1, j].Value != null)
+                            if (advancedDataGridView[j, i-1].Value != null)
                             {
                                 ws.Cells[i + 1, j + 1] = advancedDataGridView[j, i - 1].Value.ToString();
                             }

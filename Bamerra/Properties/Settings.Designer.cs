@@ -26,8 +26,6 @@ namespace Bamerra.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\BamerraData.mdf;Inte" +
-            "grated Security=True;Connect Timeout=30")]
         public string BamerraDataConnectionString {
             get {
                 return ((string)(this["BamerraDataConnectionString"]));
@@ -37,8 +35,6 @@ namespace Bamerra.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\ShopDB.mdf;Integrate" +
-            "d Security=True;Connect Timeout=30")]
         public string ShopDBConnectionString {
             get {
                 return ((string)(this["ShopDBConnectionString"]));
@@ -48,9 +44,6 @@ namespace Bamerra.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"C:\\Program Files\\Microsoft SQL Server\\" +
-            "MSSQL12.SQLEXPRESS\\MSSQL\\DATA\\BamerraDB.mdf\";Integrated Security=True;Connect Ti" +
-            "meout=30")]
         public string BamerraDBConnectionString {
             get {
                 return ((string)(this["BamerraDBConnectionString"]));
@@ -60,8 +53,8 @@ namespace Bamerra.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Bamerra.mdf;I" +
-            "ntegrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Valik\\Desktop\\Bamerr" +
+            "a\\Bamerra\\Bamerra.mdf;Integrated Security=True;Connect Timeout=30")]
         public string BamerraConnectionString {
             get {
                 return ((string)(this["BamerraConnectionString"]));

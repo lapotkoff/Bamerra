@@ -31,17 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminRightsMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.createExcelFileButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.nextButton = new System.Windows.Forms.Button();
             this.lastDataButton = new System.Windows.Forms.Button();
             this.firstDataButton = new System.Windows.Forms.Button();
             this.previousButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.createExcelFileButton = new System.Windows.Forms.Button();
             this.AddRowButton = new System.Windows.Forms.Button();
             this.savechangesButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
-            this.changeRowButton = new System.Windows.Forms.Button();
             this.deleteRowButton = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.advancedDataGridView = new ADGV.AdvancedDataGridView();
@@ -99,14 +98,6 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // createExcelFileButton
-            // 
-            resources.ApplyResources(this.createExcelFileButton, "createExcelFileButton");
-            this.createExcelFileButton.BackColor = System.Drawing.Color.Honeydew;
-            this.createExcelFileButton.Name = "createExcelFileButton";
-            this.createExcelFileButton.UseVisualStyleBackColor = false;
-            this.createExcelFileButton.Click += new System.EventHandler(this.createExcelFileButton_Click);
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -161,10 +152,17 @@
             this.panel2.Controls.Add(this.AddRowButton);
             this.panel2.Controls.Add(this.savechangesButton);
             this.panel2.Controls.Add(this.printButton);
-            this.panel2.Controls.Add(this.changeRowButton);
             this.panel2.Controls.Add(this.deleteRowButton);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // createExcelFileButton
+            // 
+            resources.ApplyResources(this.createExcelFileButton, "createExcelFileButton");
+            this.createExcelFileButton.BackColor = System.Drawing.Color.Honeydew;
+            this.createExcelFileButton.Name = "createExcelFileButton";
+            this.createExcelFileButton.UseVisualStyleBackColor = false;
+            this.createExcelFileButton.Click += new System.EventHandler(this.createExcelFileButton_Click);
             // 
             // AddRowButton
             // 
@@ -190,13 +188,6 @@
             this.printButton.Name = "printButton";
             this.printButton.UseVisualStyleBackColor = false;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
-            // 
-            // changeRowButton
-            // 
-            resources.ApplyResources(this.changeRowButton, "changeRowButton");
-            this.changeRowButton.BackColor = System.Drawing.Color.Honeydew;
-            this.changeRowButton.Name = "changeRowButton";
-            this.changeRowButton.UseVisualStyleBackColor = false;
             // 
             // deleteRowButton
             // 
@@ -513,7 +504,6 @@
         private BamerraDataSetTableAdapters.InformationTableAdapter informationTableAdapter;
         private BamerraDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button printButton;
-        private System.Windows.Forms.Button changeRowButton;
         private System.Windows.Forms.Button deleteRowButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn rowIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewLinkColumn dataGridViewTextBoxColumn1;

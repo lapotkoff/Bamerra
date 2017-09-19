@@ -23,8 +23,11 @@ namespace Bamerra
 
         private void SignInAdminButton_Click(object sender, EventArgs e)
         {
-            //string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Valik\Desktop\Bamerra\Bamerra\Bamerra.mdf;Integrated Security=True;Connect Timeout=30";
+            // string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Valik\Desktop\Bamerra\Bamerra\Bamerra.mdf;Integrated Security=True;Connect Timeout=30";
             string connection_string = Properties.Settings.Default.BamerraConnectionString;
+           // string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\Bamerra.mdf;Integrated Security=True;Connect Timeout=30";
+            //string connection_string = @"database=Bamerra.mdf";
+            // string connection_string = Application.StartupPath + "\\Bamerra.mdf";
             string command = "Select count(*) from AdminPasswords Where AdmPasswordValue='" + PasswordTextBox.Text + "'";
             using (SqlConnection sql_connection = new SqlConnection(connection_string))
             {
