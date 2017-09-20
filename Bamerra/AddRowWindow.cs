@@ -11,6 +11,7 @@ using Bamerra.Commands;
 
 namespace Bamerra
 {
+
     public partial class AddRowWindow : Form
     {
 
@@ -23,6 +24,7 @@ namespace Bamerra
         }
 
         #region Loading tools
+
         private void LoadServicesToAddTreeView()
         {
             servicesToAddTreeView.Nodes.Add("Послуги");
@@ -95,6 +97,7 @@ namespace Bamerra
             rateCombobox.Items.Add("2");
             rateCombobox.Items.Add("1");
         }
+
         #endregion
 
         private void AddRowWindow_Load(object sender, EventArgs e)
@@ -140,6 +143,7 @@ namespace Bamerra
         }
 
         #region Button events
+
         private void okButton_Click(object sender, EventArgs e)
         {
             DataRow newRow = table.NewRow();
@@ -160,8 +164,8 @@ namespace Bamerra
             {
                 newRow["PartnershipProgram"] = false;
             }
-            //district
-            //servicws
+            newRow["District"] = TreeViewCells.district_cell;
+            newRow["Services"] = TreeViewCells.services_cell;
 
             try
             {
@@ -177,6 +181,8 @@ namespace Bamerra
             }
             finally
             {
+                TreeViewCells.services_cell = "";
+                TreeViewCells.district_cell = "";
                 this.Close();
             }
         }
@@ -186,6 +192,107 @@ namespace Bamerra
             DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
+
         #endregion
+
+        #region TreeView
+
+        private void AfterCheckServicesTreeView(object sender, TreeViewEventArgs e)
+        {
+            // The code only executes if the user caused the checked state to change.
+            if (e.Action != TreeViewAction.Unknown)
+            {
+                if (e.Node.Nodes.Count > 0)
+                {
+                    /* Calls the CheckAllChildNodes method, passing in the current 
+                    Checked value of the TreeNode whose checked state changed. */
+                    this.CheckAllChildNodes(e.Node, e.Node.Checked,ref TreeViewCells.services_cell);
+                }
+                if(e.Node.Nodes.Count == 0 && e.Node.Checked == true)
+                {
+                    TreeViewCells.services_cell += e.Node.Text + ", ";
+                }
+            }
+        }
+
+        private void CheckAllChildNodes(TreeNode treeNode, bool nodeChecked,ref string choosen_words)
+        {
+            foreach (TreeNode node in treeNode.Nodes)
+            {
+                node.Checked = nodeChecked;
+                if (node.Nodes.Count > 0)
+                {
+                    // If the current node has child nodes, call the CheckAllChildsNodes method recursively.
+                    this.CheckAllChildNodes(node, nodeChecked, ref choosen_words);
+                }
+                if (node.Nodes.Count == 0 && node.Checked == true)
+                {
+                    choosen_words += node.Text + ", ";
+                }
+            }
+        }
+
+        //private void FindAllCheckedNodes(TreeNode treeNode, string columnFilter)
+        //{
+        //    if (treeNode.Checked == true)
+        //    {
+        //        string to_add = columnFilter + "LIKE '" + treeNode.Text + "%' OR";
+        //        RowFilter += to_add;
+        //    }
+        //    foreach (TreeNode node in treeNode.Nodes)
+        //    {
+        //        if (node.Checked == true)
+        //        {
+        //            string to_add = columnFilter + "LIKE '" + node.Text + "%' OR";
+        //            RowFilter += to_add;
+        //        }
+        //        if (node.Nodes.Count > 0)
+        //        {
+        //            // If the current node has child nodes, call the CheckAllChildsNodes method recursively.
+        //            this.FindAllCheckedNodes(node, columnFilter);
+        //        }
+        //    }
+        //    if (RowFilter.Length > 0)
+        //    {
+        //        RowFilter = RowFilter.Remove(RowFilter.LastIndexOf("OR"), 2);
+        //    }
+        //}
+
+
+        private void AfterCheckDistrictTreeView(object sender, TreeViewEventArgs e)
+        {
+            // The code only executes if the user caused the checked state to change.
+            if (e.Action != TreeViewAction.Unknown)
+            {
+                if (e.Node.Nodes.Count > 0)
+                {
+                    /* Calls the CheckAllChildNodes method, passing in the current 
+                    Checked value of the TreeNode whose checked state changed. */
+                    this.CheckAllChildNodes(e.Node, e.Node.Checked, ref TreeViewCells.district_cell);
+                }
+                if (e.Node.Nodes.Count == 0 && e.Node.Checked == true)
+                {
+                    TreeViewCells.district_cell += e.Node.Text + ", ";
+                }
+            }
+
+            //DataTable filteredtable = new DataTable();
+            //filteredtable.TableName = "FilteredInfo";
+            //SqlDataAdapter adapter = new SqlDataAdapter(command_string, connection_string);
+            //adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+            //adapter.Fill(filteredtable);
+            //DataView filteredView = new DataView(filteredtable, RowFilter, "District", DataViewRowState.CurrentRows);
+            //dataGridView1.DataSource = filteredView;
+
+        }
+
+#endregion
     }
+
+    public static class TreeViewCells
+    {
+        public static string services_cell = "";
+        public static string district_cell = "";
+    }
+
 }

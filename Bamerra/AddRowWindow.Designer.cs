@@ -46,14 +46,14 @@
             this.contactFaceTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.partnershipCheckBox = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.districtsToAddTreeView = new System.Windows.Forms.TreeView();
             this.servicesToAddTreeView = new System.Windows.Forms.TreeView();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.partnershipCheckBox = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             rateLabel = new System.Windows.Forms.Label();
             completedProjectsLabel = new System.Windows.Forms.Label();
@@ -250,6 +250,17 @@
             this.panel1.Size = new System.Drawing.Size(228, 375);
             this.panel1.TabIndex = 52;
             // 
+            // partnershipCheckBox
+            // 
+            this.partnershipCheckBox.AutoSize = true;
+            this.partnershipCheckBox.ForeColor = System.Drawing.Color.Honeydew;
+            this.partnershipCheckBox.Location = new System.Drawing.Point(34, 351);
+            this.partnershipCheckBox.Name = "partnershipCheckBox";
+            this.partnershipCheckBox.Size = new System.Drawing.Size(145, 17);
+            this.partnershipCheckBox.TabIndex = 52;
+            this.partnershipCheckBox.Text = "Партнерська програма";
+            this.partnershipCheckBox.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -263,6 +274,26 @@
             this.panel2.Size = new System.Drawing.Size(187, 375);
             this.panel2.TabIndex = 53;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Honeydew;
+            this.label2.Location = new System.Drawing.Point(10, 231);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Райони:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Honeydew;
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Послуги:";
+            // 
             // districtsToAddTreeView
             // 
             this.districtsToAddTreeView.BackColor = System.Drawing.Color.MintCream;
@@ -271,6 +302,7 @@
             this.districtsToAddTreeView.Name = "districtsToAddTreeView";
             this.districtsToAddTreeView.Size = new System.Drawing.Size(156, 112);
             this.districtsToAddTreeView.TabIndex = 1;
+            this.districtsToAddTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckDistrictTreeView);
             // 
             // servicesToAddTreeView
             // 
@@ -280,6 +312,7 @@
             this.servicesToAddTreeView.Name = "servicesToAddTreeView";
             this.servicesToAddTreeView.Size = new System.Drawing.Size(156, 198);
             this.servicesToAddTreeView.TabIndex = 0;
+            this.servicesToAddTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.AfterCheckServicesTreeView);
             // 
             // okButton
             // 
@@ -302,37 +335,6 @@
             this.cancelButton.Text = "Відмінити";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
-            // partnershipCheckBox
-            // 
-            this.partnershipCheckBox.AutoSize = true;
-            this.partnershipCheckBox.ForeColor = System.Drawing.Color.Honeydew;
-            this.partnershipCheckBox.Location = new System.Drawing.Point(34, 351);
-            this.partnershipCheckBox.Name = "partnershipCheckBox";
-            this.partnershipCheckBox.Size = new System.Drawing.Size(145, 17);
-            this.partnershipCheckBox.TabIndex = 52;
-            this.partnershipCheckBox.Text = "Партнерська програма";
-            this.partnershipCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Honeydew;
-            this.label1.Location = new System.Drawing.Point(10, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Послуги:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(10, 231);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Райони:";
             // 
             // AddRowWindow
             // 

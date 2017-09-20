@@ -6,7 +6,6 @@ C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\AdvancedDataGridView.dll
 C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\AdvancedDataGridView.xml
 C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\fr\AdvancedDataGridView.resources.dll
 C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\ru\AdvancedDataGridView.resources.dll
-C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.AddRowWindow.resources
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.AdminRightsMainPage.resources
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.Form1.resources
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.LogAdminPage.resources
@@ -47,3 +46,4 @@ C:\Bamerra\Bamerra\obj\Debug\Bamerra.csproj.CoreCompileInputs.cache
 C:\Bamerra\Bamerra\obj\Debug\uk\Bamerra.resources.dll
 C:\Bamerra\Bamerra\obj\Debug\Bamerra.exe
 C:\Bamerra\Bamerra\obj\Debug\Bamerra.pdb
+C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.AddRowWindow.resources
