@@ -15,6 +15,7 @@ namespace Bamerra
         public Form1()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void AdminButton_Click(object sender, EventArgs e)
@@ -26,8 +27,8 @@ namespace Bamerra
 
         private void UserButton_Click(object sender, EventArgs e)
         {
-            UserRightsMainPage usermainpage = new UserRightsMainPage();
-            usermainpage.Show();
+            LogUserPage log_userpage = new LogUserPage();
+            log_userpage.Show();
             this.Hide();
 
         }

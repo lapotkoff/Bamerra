@@ -108,6 +108,12 @@
     <Compile Include="LogAdminPage.Designer.cs">
       <DependentUpon>LogAdminPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogUserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogUserPage.Designer.cs">
+      <DependentUpon>LogUserPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +152,9 @@
     <EmbeddedResource Include="LogAdminPage.resx">
       <DependentUpon>LogAdminPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogUserPage.resx">
+      <DependentUpon>LogUserPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -155,6 +164,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserRightsMainPage.resx">
+      <DependentUpon>UserRightsMainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BamerraDataSet.xsc">
       <DependentUpon>BamerraDataSet.xsd</DependentUpon>
     </None>

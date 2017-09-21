@@ -70,80 +70,88 @@
             // 
             nameLabel.AutoSize = true;
             nameLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            nameLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nameLabel.ForeColor = System.Drawing.Color.Honeydew;
             nameLabel.Location = new System.Drawing.Point(3, 11);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(42, 13);
+            nameLabel.Size = new System.Drawing.Size(42, 16);
             nameLabel.TabIndex = 31;
             nameLabel.Text = "Назва:";
             // 
             // rateLabel
             // 
             rateLabel.AutoSize = true;
+            rateLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             rateLabel.ForeColor = System.Drawing.Color.Honeydew;
             rateLabel.Location = new System.Drawing.Point(3, 315);
             rateLabel.Name = "rateLabel";
-            rateLabel.Size = new System.Drawing.Size(51, 13);
+            rateLabel.Size = new System.Drawing.Size(57, 16);
             rateLabel.TabIndex = 49;
             rateLabel.Text = "Рейтинг:";
             // 
             // completedProjectsLabel
             // 
             completedProjectsLabel.AutoSize = true;
+            completedProjectsLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             completedProjectsLabel.ForeColor = System.Drawing.Color.Honeydew;
             completedProjectsLabel.Location = new System.Drawing.Point(3, 247);
             completedProjectsLabel.Name = "completedProjectsLabel";
-            completedProjectsLabel.Size = new System.Drawing.Size(99, 13);
+            completedProjectsLabel.Size = new System.Drawing.Size(108, 16);
             completedProjectsLabel.TabIndex = 47;
             completedProjectsLabel.Text = "Виконані проекти:";
             // 
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
+            descriptionLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descriptionLabel.ForeColor = System.Drawing.Color.Honeydew;
             descriptionLabel.Location = new System.Drawing.Point(3, 138);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(36, 13);
+            descriptionLabel.Size = new System.Drawing.Size(38, 16);
             descriptionLabel.TabIndex = 45;
             descriptionLabel.Text = "Опис:";
             // 
             // e_mailLabel
             // 
             e_mailLabel.AutoSize = true;
+            e_mailLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             e_mailLabel.ForeColor = System.Drawing.Color.Honeydew;
             e_mailLabel.Location = new System.Drawing.Point(3, 112);
             e_mailLabel.Name = "e_mailLabel";
-            e_mailLabel.Size = new System.Drawing.Size(38, 13);
+            e_mailLabel.Size = new System.Drawing.Size(48, 16);
             e_mailLabel.TabIndex = 43;
             e_mailLabel.Text = "E-mail:";
             // 
             // lPRLabel
             // 
             lPRLabel.AutoSize = true;
+            lPRLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lPRLabel.ForeColor = System.Drawing.Color.Honeydew;
             lPRLabel.Location = new System.Drawing.Point(3, 86);
             lPRLabel.Name = "lPRLabel";
-            lPRLabel.Size = new System.Drawing.Size(33, 13);
+            lPRLabel.Size = new System.Drawing.Size(33, 16);
             lPRLabel.TabIndex = 41;
             lPRLabel.Text = "ЛПР:";
             // 
             // contactFaceLabel
             // 
             contactFaceLabel.AutoSize = true;
+            contactFaceLabel.Font = new System.Drawing.Font("Trebuchet MS", 6.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             contactFaceLabel.ForeColor = System.Drawing.Color.Honeydew;
             contactFaceLabel.Location = new System.Drawing.Point(3, 60);
             contactFaceLabel.Name = "contactFaceLabel";
-            contactFaceLabel.Size = new System.Drawing.Size(106, 13);
+            contactFaceLabel.Size = new System.Drawing.Size(106, 15);
             contactFaceLabel.TabIndex = 39;
             contactFaceLabel.Text = "Контактне обличчя:";
             // 
             // addressLabel
             // 
             addressLabel.AutoSize = true;
+            addressLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             addressLabel.ForeColor = System.Drawing.Color.Honeydew;
             addressLabel.Location = new System.Drawing.Point(3, 34);
             addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(47, 13);
+            addressLabel.Size = new System.Drawing.Size(49, 16);
             addressLabel.TabIndex = 35;
             addressLabel.Text = "Адреса:";
             // 
@@ -253,10 +261,11 @@
             // partnershipCheckBox
             // 
             this.partnershipCheckBox.AutoSize = true;
+            this.partnershipCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partnershipCheckBox.ForeColor = System.Drawing.Color.Honeydew;
             this.partnershipCheckBox.Location = new System.Drawing.Point(34, 351);
             this.partnershipCheckBox.Name = "partnershipCheckBox";
-            this.partnershipCheckBox.Size = new System.Drawing.Size(145, 17);
+            this.partnershipCheckBox.Size = new System.Drawing.Size(150, 20);
             this.partnershipCheckBox.TabIndex = 52;
             this.partnershipCheckBox.Text = "Партнерська програма";
             this.partnershipCheckBox.UseVisualStyleBackColor = true;
@@ -277,20 +286,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Honeydew;
             this.label2.Location = new System.Drawing.Point(10, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Райони:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Honeydew;
             this.label1.Location = new System.Drawing.Point(10, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Послуги:";
             // 
@@ -317,6 +328,7 @@
             // okButton
             // 
             this.okButton.BackColor = System.Drawing.Color.MintCream;
+            this.okButton.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okButton.Location = new System.Drawing.Point(76, 398);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(95, 27);
@@ -328,6 +340,7 @@
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.MintCream;
+            this.cancelButton.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.Location = new System.Drawing.Point(292, 398);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(95, 27);

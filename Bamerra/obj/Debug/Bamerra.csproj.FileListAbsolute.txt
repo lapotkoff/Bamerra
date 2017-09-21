@@ -47,3 +47,5 @@ C:\Bamerra\Bamerra\obj\Debug\uk\Bamerra.resources.dll
 C:\Bamerra\Bamerra\obj\Debug\Bamerra.exe
 C:\Bamerra\Bamerra\obj\Debug\Bamerra.pdb
 C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.AddRowWindow.resources
+C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.LogUserPage.resources
+C:\Users\Valik\Desktop\Bamerra\Bamerra\obj\Debug\Bamerra.UserRightsMainPage.resources

@@ -39,6 +39,7 @@ namespace Bamerra
             lblTotal.Text = string.Format("Загальна кількість рядків: {0}", informationBindingSource.Count);
             this.informationTableAdapter.Adapter.RowUpdated += adapter_RowUpdated;
             RowsColor();
+            CenterToScreen();
             //        //this.advancedDataGridView.RowHeadersVisible = false;       ?????
             //        //advancedDataGridView.ReadOnly = true;
         }

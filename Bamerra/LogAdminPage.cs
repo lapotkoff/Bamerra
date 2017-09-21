@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Bamerra.Commands;
 
 namespace Bamerra
 {
@@ -15,20 +16,19 @@ namespace Bamerra
     {
         private byte counter = 3;
         private byte failedpasswords = 0;
+        private string connection_string = Properties.Settings.Default.BamerraConnectionString;
+        // string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Valik\Desktop\Bamerra\Bamerra\Bamerra.mdf;Integrated Security=True;Connect Timeout=30";
+
 
         public LogAdminPage()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void SignInAdminButton_Click(object sender, EventArgs e)
         {
-            // string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Valik\Desktop\Bamerra\Bamerra\Bamerra.mdf;Integrated Security=True;Connect Timeout=30";
-            string connection_string = Properties.Settings.Default.BamerraConnectionString;
-           // string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Valik\Desktop\Bamerra\Bamerra\bin\Debug\Bamerra.mdf;Integrated Security=True;Connect Timeout=30";
-            //string connection_string = @"database=Bamerra.mdf";
-            // string connection_string = Application.StartupPath + "\\Bamerra.mdf";
-            string command = "Select count(*) from AdminPasswords Where AdmPasswordValue='" + PasswordTextBox.Text + "'";
+            string command = "Select count(*) from AdminPasswords Where AdmPasswordValue='" + PasswordTextBox.Text + "' AND Flag='TRUE'";
             using (SqlConnection sql_connection = new SqlConnection(connection_string))
             {
                 SqlDataAdapter sql_data_adapter = new SqlDataAdapter(command, sql_connection);
@@ -46,12 +46,13 @@ namespace Bamerra
                     MessageBox.Show("Please check your name and password!");
                     warningLabel.Text = string.Format("У вас залишилось {0} спроб, будьте уважніші", counter);
 
-                    //подумати над цим!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     if(counter == 0 && failedpasswords == 0)
                     {
                         failedpasswords++;
                         warningLabel.Text = string.Format("Ви втратили можливість вводити PIN1!");
-                        //чи треба видаляти з бази pin1?
+
+                        DBManager.changeflag("AdminPasswords", "AdmPasswordID", 1);
+
                         pinPukLabel.Text = string.Format("PIN2:");
                         counter = 3;
                     }
@@ -59,7 +60,7 @@ namespace Bamerra
                     {
                         failedpasswords++;
                         warningLabel.Text = string.Format("Ви втратили можливість вводити PIN2!");
-                        //чи треба видаляти з бази pin1?
+                        DBManager.changeflag("AdminPasswords", "AdmPasswordID", 2);
                         pinPukLabel.Text = string.Format("PUK1:");
                         counter = 3;
                     }
@@ -67,14 +68,15 @@ namespace Bamerra
                     {
                         failedpasswords++;
                         warningLabel.Text = string.Format("Ви втратили можливість вводити PUK1!");
-                        //чи треба видаляти з бази pin1?
+                        DBManager.changeflag("AdminPasswords", "AdmPasswordID", 3);
                         pinPukLabel.Text = string.Format("PUK2:");
                         counter = 3;
                     }
                     else if(counter == 0 && failedpasswords == 3)
                     {
                         warningLabel.Text = string.Format("На жаль, ваші дії сприймаються програмою як зловмисницькі, саме тому ми змушені заборонити вам доступ до ресурсів.");
-                        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                        DBManager.changeflag("AdminPasswords", "AdmPasswordID", 4);
+                        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         System.Threading.Thread.Sleep(7000);
                         Application.Exit();
                     }
@@ -86,5 +88,6 @@ namespace Bamerra
         {
             Application.Exit();
         }
+
     }
 }

@@ -146,44 +146,52 @@ namespace Bamerra
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            DataRow newRow = table.NewRow();
-            newRow["Name"] = nameTextBox.Text.Count() == 0 ? null : nameTextBox.Text;
-            newRow["Address"] = addressTextBox.Text.Count() == 0 ? null : addressTextBox.Text;
-            newRow["ContactFace"] = contactFaceTextBox.Text.Count() == 0 ? null : contactFaceTextBox.Text;
-            newRow["LPR"] = lPRTextBox.Text.Count() == 0 ? null : lPRTextBox.Text;
-            newRow["Email"] = e_mailTextBox.Text.Count() == 0 ? null : e_mailTextBox.Text;
-            newRow["Description"] = descriptionTextBox.Text.Count() == 0 ? null : descriptionTextBox.Text;
-            newRow["Email"] = e_mailTextBox.Text.Count() == 0 ? null : e_mailTextBox.Text;
-            newRow["CompletedProjects"] = completedProjectsTextBox.Text.Count() == 0 ? null : completedProjectsTextBox.Text;
-            newRow["Rate"] = rateTextBox.Text.Count() == 0 ? null : rateTextBox.Text;
-            if(partnershipCheckBox.Checked == true)
+            string name = nameTextBox.Text.Trim(' ');
+            if (name == "" || rateTextBox.Text == "" || rateTextBox.Text == "No")
             {
-                newRow["PartnershipProgram"] = true;
+                MessageBox.Show("Не всі обов'язкові поля заповнено! Будьте уважніші!");
             }
             else
             {
-                newRow["PartnershipProgram"] = false;
-            }
-            newRow["District"] = TreeViewCells.district_cell;
-            newRow["Services"] = TreeViewCells.services_cell;
+                DataRow newRow = table.NewRow();
+                newRow["Name"] = nameTextBox.Text;
+                newRow["Address"] = addressTextBox.Text.Count() == 0 ? null : addressTextBox.Text;
+                newRow["ContactFace"] = contactFaceTextBox.Text.Count() == 0 ? null : contactFaceTextBox.Text;
+                newRow["LPR"] = lPRTextBox.Text.Count() == 0 ? null : lPRTextBox.Text;
+                newRow["Email"] = e_mailTextBox.Text.Count() == 0 ? null : e_mailTextBox.Text;
+                newRow["Description"] = descriptionTextBox.Text.Count() == 0 ? null : descriptionTextBox.Text;
+                newRow["Email"] = e_mailTextBox.Text.Count() == 0 ? null : e_mailTextBox.Text;
+                newRow["CompletedProjects"] = completedProjectsTextBox.Text.Count() == 0 ? null : completedProjectsTextBox.Text;
+                newRow["Rate"] = rateTextBox.Text;
+                if (partnershipCheckBox.Checked == true)
+                {
+                    newRow["PartnershipProgram"] = true;
+                }
+                else
+                {
+                    newRow["PartnershipProgram"] = false;
+                }
+                newRow["District"] = TreeViewCells.district_cell;
+                newRow["Services"] = TreeViewCells.services_cell;
 
-            try
-            {
-                table.Rows.Add(newRow);
+                try
+                {
+                    table.Rows.Add(newRow);
 
-                DialogResult = System.Windows.Forms.DialogResult.OK;
+                    DialogResult = System.Windows.Forms.DialogResult.OK;
 
-                DBManager.InsertInformation(newRow);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                TreeViewCells.services_cell = "";
-                TreeViewCells.district_cell = "";
-                this.Close();
+                    DBManager.InsertInformation(newRow);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    TreeViewCells.services_cell = "";
+                    TreeViewCells.district_cell = "";
+                    this.Close();
+                }
             }
         }
 

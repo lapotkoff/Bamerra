@@ -33,8 +33,8 @@
             this.SignInAdminButton = new System.Windows.Forms.Button();
             this.ExitAppButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.warningLabel = new System.Windows.Forms.Label();
             this.adminLabel = new System.Windows.Forms.Label();
+            this.warningLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,11 +42,11 @@
             // 
             this.pinPukLabel.AutoSize = true;
             this.pinPukLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.pinPukLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinPukLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinPukLabel.ForeColor = System.Drawing.Color.MintCream;
             this.pinPukLabel.Location = new System.Drawing.Point(31, 49);
             this.pinPukLabel.Name = "pinPukLabel";
-            this.pinPukLabel.Size = new System.Drawing.Size(45, 16);
+            this.pinPukLabel.Size = new System.Drawing.Size(42, 18);
             this.pinPukLabel.TabIndex = 1;
             this.pinPukLabel.Text = "PIN1:";
             // 
@@ -61,7 +61,7 @@
             // SignInAdminButton
             // 
             this.SignInAdminButton.BackColor = System.Drawing.Color.MintCream;
-            this.SignInAdminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignInAdminButton.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInAdminButton.Location = new System.Drawing.Point(34, 116);
             this.SignInAdminButton.Name = "SignInAdminButton";
             this.SignInAdminButton.Size = new System.Drawing.Size(88, 41);
@@ -73,7 +73,7 @@
             // ExitAppButton
             // 
             this.ExitAppButton.BackColor = System.Drawing.Color.MintCream;
-            this.ExitAppButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitAppButton.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitAppButton.Location = new System.Drawing.Point(160, 116);
             this.ExitAppButton.Name = "ExitAppButton";
             this.ExitAppButton.Size = new System.Drawing.Size(88, 41);
@@ -97,6 +97,17 @@
             this.panel1.Size = new System.Drawing.Size(291, 195);
             this.panel1.TabIndex = 7;
             // 
+            // adminLabel
+            // 
+            this.adminLabel.AutoSize = true;
+            this.adminLabel.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminLabel.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.adminLabel.Location = new System.Drawing.Point(74, 13);
+            this.adminLabel.Name = "adminLabel";
+            this.adminLabel.Size = new System.Drawing.Size(144, 27);
+            this.adminLabel.TabIndex = 8;
+            this.adminLabel.Text = "Administrator";
+            // 
             // warningLabel
             // 
             this.warningLabel.AutoSize = true;
@@ -105,17 +116,6 @@
             this.warningLabel.Name = "warningLabel";
             this.warningLabel.Size = new System.Drawing.Size(0, 13);
             this.warningLabel.TabIndex = 7;
-            // 
-            // adminLabel
-            // 
-            this.adminLabel.AutoSize = true;
-            this.adminLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminLabel.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.adminLabel.Location = new System.Drawing.Point(74, 13);
-            this.adminLabel.Name = "adminLabel";
-            this.adminLabel.Size = new System.Drawing.Size(138, 25);
-            this.adminLabel.TabIndex = 8;
-            this.adminLabel.Text = "Administrator";
             // 
             // LogAdminPage
             // 

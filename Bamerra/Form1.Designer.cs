@@ -39,17 +39,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 17);
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 25);
+            this.label1.Size = new System.Drawing.Size(217, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Bamerra";
+            this.label1.Text = "Welcome to Bamerra!";
             // 
             // AdminButton
             // 
             this.AdminButton.BackColor = System.Drawing.Color.MintCream;
-            this.AdminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminButton.Location = new System.Drawing.Point(72, 61);
             this.AdminButton.Name = "AdminButton";
             this.AdminButton.Size = new System.Drawing.Size(104, 37);
@@ -61,7 +61,7 @@
             // UserButton
             // 
             this.UserButton.BackColor = System.Drawing.Color.MintCream;
-            this.UserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserButton.Location = new System.Drawing.Point(72, 104);
             this.UserButton.Name = "UserButton";
             this.UserButton.Size = new System.Drawing.Size(104, 37);
@@ -73,7 +73,7 @@
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.MintCream;
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.Location = new System.Drawing.Point(72, 147);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(104, 37);
