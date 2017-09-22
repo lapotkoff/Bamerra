@@ -143,6 +143,9 @@
     <EmbeddedResource Include="AdminRightsMainPage.resx">
       <DependentUpon>AdminRightsMainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminRightsMainPage.uk-UA.resx">
+      <DependentUpon>AdminRightsMainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminRightsMainPage.uk.resx">
       <DependentUpon>AdminRightsMainPage.cs</DependentUpon>
     </EmbeddedResource>

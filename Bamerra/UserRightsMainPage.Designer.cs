@@ -222,7 +222,7 @@
             this.panel3.Controls.Add(this.previousButton);
             this.panel3.Location = new System.Drawing.Point(12, 409);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 107);
+            this.panel3.Size = new System.Drawing.Size(519, 66);
             this.panel3.TabIndex = 46;
             // 
             // lastDataButton
@@ -231,7 +231,7 @@
             this.lastDataButton.BackColor = System.Drawing.Color.Honeydew;
             this.lastDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.lastDataButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lastDataButton.Location = new System.Drawing.Point(137, 60);
+            this.lastDataButton.Location = new System.Drawing.Point(387, 8);
             this.lastDataButton.Name = "lastDataButton";
             this.lastDataButton.Size = new System.Drawing.Size(118, 40);
             this.lastDataButton.TabIndex = 28;
@@ -245,7 +245,7 @@
             this.nextButton.BackColor = System.Drawing.Color.Honeydew;
             this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.nextButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.nextButton.Location = new System.Drawing.Point(13, 3);
+            this.nextButton.Location = new System.Drawing.Point(15, 8);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(118, 40);
             this.nextButton.TabIndex = 25;
@@ -259,7 +259,7 @@
             this.firstDataButton.BackColor = System.Drawing.Color.Honeydew;
             this.firstDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.firstDataButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.firstDataButton.Location = new System.Drawing.Point(137, 3);
+            this.firstDataButton.Location = new System.Drawing.Point(263, 8);
             this.firstDataButton.Name = "firstDataButton";
             this.firstDataButton.Size = new System.Drawing.Size(118, 40);
             this.firstDataButton.TabIndex = 27;
@@ -273,7 +273,7 @@
             this.previousButton.BackColor = System.Drawing.Color.Honeydew;
             this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.previousButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.previousButton.Location = new System.Drawing.Point(13, 60);
+            this.previousButton.Location = new System.Drawing.Point(139, 8);
             this.previousButton.Name = "previousButton";
             this.previousButton.Size = new System.Drawing.Size(118, 40);
             this.previousButton.TabIndex = 26;
@@ -287,7 +287,7 @@
             this.exitButton.BackColor = System.Drawing.Color.Honeydew;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.exitButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exitButton.Location = new System.Drawing.Point(825, 476);
+            this.exitButton.Location = new System.Drawing.Point(825, 419);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(118, 40);
             this.exitButton.TabIndex = 47;
@@ -299,24 +299,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(424, 22);
+            this.label1.Location = new System.Drawing.Point(390, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 35);
+            this.label1.Size = new System.Drawing.Size(170, 35);
             this.label1.TabIndex = 48;
-            this.label1.Text = "User";
+            this.label1.Text = "Користувач";
             // 
             // UserRightsMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(955, 528);
+            this.ClientSize = new System.Drawing.Size(955, 489);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.advancedDataGridView);
             this.Name = "UserRightsMainPage";
             this.Text = "Bamerra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserRightsMainPage_FormClosing);
             this.Load += new System.EventHandler(this.UserRightsMainPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).EndInit();

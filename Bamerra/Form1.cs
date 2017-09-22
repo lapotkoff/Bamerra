@@ -21,15 +21,15 @@ namespace Bamerra
         private void AdminButton_Click(object sender, EventArgs e)
         {
             LogAdminPage log_admin_page = new LogAdminPage();
-            log_admin_page.Show();
             this.Hide();
+            log_admin_page.ShowDialog();
         }
 
         private void UserButton_Click(object sender, EventArgs e)
         {
             LogUserPage log_userpage = new LogUserPage();
-            log_userpage.Show();
             this.Hide();
+            log_userpage.ShowDialog();
 
         }
 

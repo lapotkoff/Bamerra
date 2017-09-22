@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminRightsMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.recoverPasswordsButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.nextButton = new System.Windows.Forms.Button();
@@ -85,6 +86,7 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.recoverPasswordsButton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -92,11 +94,23 @@
             this.panel1.Controls.Add(this.advancedDataGridView);
             this.panel1.Controls.Add(this.exitButton);
             this.panel1.Name = "panel1";
+            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
+            // 
+            // recoverPasswordsButton
+            // 
+            resources.ApplyResources(this.recoverPasswordsButton, "recoverPasswordsButton");
+            this.recoverPasswordsButton.BackColor = System.Drawing.Color.Honeydew;
+            this.recoverPasswordsButton.Name = "recoverPasswordsButton";
+            this.toolTip1.SetToolTip(this.recoverPasswordsButton, resources.GetString("recoverPasswordsButton.ToolTip"));
+            this.recoverPasswordsButton.UseVisualStyleBackColor = false;
+            this.recoverPasswordsButton.Click += new System.EventHandler(this.recoverPasswordsButton_Click);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label1.Name = "label1";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // panel3
             // 
@@ -107,6 +121,7 @@
             this.panel3.Controls.Add(this.previousButton);
             this.panel3.Controls.Add(this.firstDataButton);
             this.panel3.Name = "panel3";
+            this.toolTip1.SetToolTip(this.panel3, resources.GetString("panel3.ToolTip"));
             // 
             // nextButton
             // 
@@ -155,12 +170,14 @@
             this.panel2.Controls.Add(this.savechangesButton);
             this.panel2.Controls.Add(this.deleteRowButton);
             this.panel2.Name = "panel2";
+            this.toolTip1.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
             // 
             // createExcelFileButton
             // 
             resources.ApplyResources(this.createExcelFileButton, "createExcelFileButton");
             this.createExcelFileButton.BackColor = System.Drawing.Color.Honeydew;
             this.createExcelFileButton.Name = "createExcelFileButton";
+            this.toolTip1.SetToolTip(this.createExcelFileButton, resources.GetString("createExcelFileButton.ToolTip"));
             this.createExcelFileButton.UseVisualStyleBackColor = false;
             this.createExcelFileButton.Click += new System.EventHandler(this.createExcelFileButton_Click);
             // 
@@ -169,6 +186,7 @@
             resources.ApplyResources(this.AddRowButton, "AddRowButton");
             this.AddRowButton.BackColor = System.Drawing.Color.Honeydew;
             this.AddRowButton.Name = "AddRowButton";
+            this.toolTip1.SetToolTip(this.AddRowButton, resources.GetString("AddRowButton.ToolTip"));
             this.AddRowButton.UseVisualStyleBackColor = false;
             this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
             // 
@@ -177,6 +195,7 @@
             resources.ApplyResources(this.printButton, "printButton");
             this.printButton.BackColor = System.Drawing.Color.Honeydew;
             this.printButton.Name = "printButton";
+            this.toolTip1.SetToolTip(this.printButton, resources.GetString("printButton.ToolTip"));
             this.printButton.UseVisualStyleBackColor = false;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
@@ -194,6 +213,7 @@
             resources.ApplyResources(this.deleteRowButton, "deleteRowButton");
             this.deleteRowButton.BackColor = System.Drawing.Color.Honeydew;
             this.deleteRowButton.Name = "deleteRowButton";
+            this.toolTip1.SetToolTip(this.deleteRowButton, resources.GetString("deleteRowButton.ToolTip"));
             this.deleteRowButton.UseVisualStyleBackColor = false;
             this.deleteRowButton.Click += new System.EventHandler(this.deleteRowButton_Click);
             // 
@@ -202,11 +222,12 @@
             resources.ApplyResources(this.lblTotal, "lblTotal");
             this.lblTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblTotal.Name = "lblTotal";
+            this.toolTip1.SetToolTip(this.lblTotal, resources.GetString("lblTotal.ToolTip"));
             // 
             // advancedDataGridView
             // 
-            this.advancedDataGridView.AllowUserToOrderColumns = true;
             resources.ApplyResources(this.advancedDataGridView, "advancedDataGridView");
+            this.advancedDataGridView.AllowUserToOrderColumns = true;
             this.advancedDataGridView.AutoGenerateColumns = false;
             this.advancedDataGridView.AutoGenerateContextFilters = true;
             this.advancedDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -228,6 +249,7 @@
             this.advancedDataGridView.DateWithTime = false;
             this.advancedDataGridView.Name = "advancedDataGridView";
             this.advancedDataGridView.TimeFilter = false;
+            this.toolTip1.SetToolTip(this.advancedDataGridView, resources.GetString("advancedDataGridView.ToolTip"));
             this.advancedDataGridView.SortStringChanged += new System.EventHandler(this.advancedDataGridView_SortStringChanged);
             this.advancedDataGridView.FilterStringChanged += new System.EventHandler(this.advancedDataGridView_FilterStringChanged);
             // 
@@ -419,6 +441,8 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.Controls.Add(this.panel1);
             this.Name = "AdminRightsMainPage";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminRightsMainPage_FormClosing);
             this.Load += new System.EventHandler(this.AdminMainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -485,5 +509,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn partnershipProgramDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button recoverPasswordsButton;
     }
 }

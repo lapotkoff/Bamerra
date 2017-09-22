@@ -42,19 +42,19 @@
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 27);
+            this.label1.Size = new System.Drawing.Size(303, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Bamerra!";
+            this.label1.Text = "Ласкаво просимо до Bamerra!";
             // 
             // AdminButton
             // 
             this.AdminButton.BackColor = System.Drawing.Color.MintCream;
             this.AdminButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminButton.Location = new System.Drawing.Point(72, 61);
+            this.AdminButton.Location = new System.Drawing.Point(119, 61);
             this.AdminButton.Name = "AdminButton";
             this.AdminButton.Size = new System.Drawing.Size(104, 37);
             this.AdminButton.TabIndex = 1;
-            this.AdminButton.Text = "Administrator";
+            this.AdminButton.Text = "Адміністратор";
             this.AdminButton.UseVisualStyleBackColor = false;
             this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click);
             // 
@@ -62,11 +62,11 @@
             // 
             this.UserButton.BackColor = System.Drawing.Color.MintCream;
             this.UserButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserButton.Location = new System.Drawing.Point(72, 104);
+            this.UserButton.Location = new System.Drawing.Point(119, 104);
             this.UserButton.Name = "UserButton";
             this.UserButton.Size = new System.Drawing.Size(104, 37);
             this.UserButton.TabIndex = 2;
-            this.UserButton.Text = "User";
+            this.UserButton.Text = "Користувач";
             this.UserButton.UseVisualStyleBackColor = false;
             this.UserButton.Click += new System.EventHandler(this.UserButton_Click);
             // 
@@ -74,11 +74,11 @@
             // 
             this.ExitButton.BackColor = System.Drawing.Color.MintCream;
             this.ExitButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(72, 147);
+            this.ExitButton.Location = new System.Drawing.Point(119, 147);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(104, 37);
             this.ExitButton.TabIndex = 3;
-            this.ExitButton.Text = "Exit";
+            this.ExitButton.Text = "Вихід";
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -92,7 +92,7 @@
             this.panel1.Controls.Add(this.UserButton);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 208);
+            this.panel1.Size = new System.Drawing.Size(342, 208);
             this.panel1.TabIndex = 4;
             // 
             // Form1
@@ -100,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(287, 237);
+            this.ClientSize = new System.Drawing.Size(366, 237);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Bamerra";

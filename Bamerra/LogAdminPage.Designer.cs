@@ -66,7 +66,7 @@
             this.SignInAdminButton.Name = "SignInAdminButton";
             this.SignInAdminButton.Size = new System.Drawing.Size(88, 41);
             this.SignInAdminButton.TabIndex = 4;
-            this.SignInAdminButton.Text = "Sign in";
+            this.SignInAdminButton.Text = "Ввійти";
             this.SignInAdminButton.UseVisualStyleBackColor = false;
             this.SignInAdminButton.Click += new System.EventHandler(this.SignInAdminButton_Click);
             // 
@@ -78,7 +78,7 @@
             this.ExitAppButton.Name = "ExitAppButton";
             this.ExitAppButton.Size = new System.Drawing.Size(88, 41);
             this.ExitAppButton.TabIndex = 6;
-            this.ExitAppButton.Text = "Exit";
+            this.ExitAppButton.Text = "Вийти";
             this.ExitAppButton.UseVisualStyleBackColor = false;
             this.ExitAppButton.Click += new System.EventHandler(this.ExitAppButton_Click);
             // 
@@ -104,9 +104,9 @@
             this.adminLabel.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.adminLabel.Location = new System.Drawing.Point(74, 13);
             this.adminLabel.Name = "adminLabel";
-            this.adminLabel.Size = new System.Drawing.Size(144, 27);
+            this.adminLabel.Size = new System.Drawing.Size(168, 27);
             this.adminLabel.TabIndex = 8;
-            this.adminLabel.Text = "Administrator";
+            this.adminLabel.Text = "Адміністратор";
             // 
             // warningLabel
             // 
@@ -126,6 +126,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "LogAdminPage";
             this.Text = "Bamerra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogAdminPage_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

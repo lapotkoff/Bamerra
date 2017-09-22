@@ -25,6 +25,9 @@ namespace Bamerra
    
         public AdminRightsMainPage()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("uk");
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("uk");
+
             InitializeComponent();
         }
 
@@ -106,7 +109,7 @@ namespace Bamerra
             iExit = MessageBox.Show("Ви дійсно хочете вийти?", "Bamerra", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(iExit == DialogResult.Yes)
             {
-                System.Windows.Forms.Application.Exit();
+                Environment.Exit(0);
             }
         }
 
@@ -202,6 +205,16 @@ namespace Bamerra
             }
         }
 
+        private void recoverPasswordsButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                DBManager.changeflag("AdminPasswords", "AdmPasswordID", i, "TRUE");
+                DBManager.changeflag("UserPasswords", "UsrPasswordID", i, "TRUE");
+            }
+            MessageBox.Show("Паролі успішно відновлено!");
+        }
+
         #endregion
 
         #region Advanced DGridView events
@@ -237,6 +250,26 @@ namespace Bamerra
                 }
 
 
+            }
+        }
+
+        private void AdminRightsMainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Ви дійсно хочете вийти?", "Bamerra", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                e.Cancel = true;
             }
         }
 
